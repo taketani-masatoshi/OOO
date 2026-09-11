@@ -58,7 +58,7 @@ Core は通常、cwd から `tenants/` を自動検出します（`ORGOS_HOME` /
 git clone --recurse-submodules https://github.com/taketani-masatoshi/OOO.git
 ```
 
-`tenants/` の実データ、`operations/` 抽出、`runtime-private/` は公開しません。Core / Community の未コミット作業ツリーもこの傘リポには含めません。
+**ポスト規則:** テナント情報は GitHub に載せない（`tenants/GIT-POLICY.md` 以外）。`operations/` 抽出と `runtime-private/` も公開しません。Core / Community の未コミット作業ツリーもこの傘リポには含めません。
 
 ---
 
