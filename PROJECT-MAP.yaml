@@ -1,6 +1,6 @@
 ooo_root: /Users/kk/OOO
 generated_at: "2026-09-07T07:05:00+09:00"
-updated_at: "2026-09-07T08:51:00+09:00"
+updated_at: "2026-09-11T14:30:00+09:00"
 
 root:
   path: /Users/kk/OOO
@@ -45,6 +45,8 @@ projects:
       typecheck fixes in contracts.ts / snapshot-history.ts are re-applied after sync.
     destination: /Users/kk/OOO/Core
     development_root: /Users/kk/OOO/Core
+    role: canonical_source
+    edit: true
     git_included: true
     git_policy: copy includes .git; do not modify source; no push from migration
   Community:
@@ -55,6 +57,8 @@ projects:
       development canonical. Resync uses rsync -a WITHOUT --delete (exclude .git).
     destination: /Users/kk/OOO/Community
     development_root: /Users/kk/OOO/Community
+    role: canonical_source
+    edit: true
     git_included: true
     git_policy: copy includes .git to preserve remote/history
   Web:
@@ -63,7 +67,12 @@ projects:
       actual_source: /Users/kk/OOO/Community/sites/coming-soon
       destination: /Users/kk/OOO/Web
       development_root: /Users/kk/OOO/Web
+      role: canonical_edit
+      generated_by: Community packages/shared generate-overview-links (OVERVIEW_DIR / --dir)
       publish_mirror: /Users/kk/OOO/Community/sites/coming-soon
+      publish_mirror_role: generated_mirror
+      sync_command: "cd Web && npm run sync-to-community  # dry-run; :apply writes"
+      git_undecided: true
       provisional: false
       hosts: ["oorgos.org", "www.oorgos.org"]
       note: >
@@ -82,6 +91,9 @@ projects:
       git_policy: no dedicated .git (subtree copy)
   Console:
     destination: /Users/kk/OOO/Console
+    role: extract_not_canonical
+    edit: false
+    notice: Console/EXTRACT-NOT-CANONICAL.md
     development_note: >
       Console builds via Core monorepo: cd /Users/kk/OOO/Core && npm run wire-console:build
       (and operator-console:build). Standalone extract vite build is non-goal.
@@ -107,6 +119,10 @@ projects:
         also: /Users/kk/OOO/Console/apps/shared
   Auth:
     destination: /Users/kk/OOO/Auth
+    role: extract_not_canonical
+    edit: false
+    notice: Auth/EXTRACT-NOT-CANONICAL.md
+    do_not_promote_to_shared_package: true
     contracts: /Users/kk/OOO/Auth/contracts/README.md
     sources:
       - /Users/kk/OOO/Core/apps/wire-console/src/webauthn-*.ts
@@ -123,6 +139,9 @@ projects:
   tenants:
     actual_source: /Users/kk/OOO/Core/tenants
     destination: /Users/kk/OOO/tenants
+    role: extract_not_canonical
+    edit: false
+    live_data: /Users/kk/OOO/Core/tenants
     development_note: >
       Day-to-day tenant data for Core CLI is under /Users/kk/OOO/Core/tenants (detected from cwd).
       Top-level /Users/kk/OOO/tenants is a migration extract for comparison; see tenants/GIT-POLICY.md.
@@ -133,12 +152,25 @@ projects:
       - /Users/kk/OOO/Core/services
       - /Users/kk/OOO/Core/scripts
     destination: /Users/kk/OOO/operations
+    role: extract_not_canonical
+    edit: false
+    notice: operations/EXTRACT-NOT-CANONICAL.md
   artifacts:
     destination: /Users/kk/OOO/artifacts
     note: verify + completion logs in artifacts/reports/
   runtime-private:
     destination: /Users/kk/OOO/runtime-private
+    role: local_runtime
+    edit: false
     note: local-only; no secrets committed
+  shared_resources_integrator_owned:
+    - Core/package-lock.json
+    - Community/package-lock.json
+    - Core/schemas
+    - Community prisma migrations
+    - Auth contracts (canonical in source repos, not Auth/ extract)
+    - generated registries
+    - GitHub Actions workflows
 
 verification:
   as_of: "2026-09-07T08:51:00+09:00"

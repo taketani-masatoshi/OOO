@@ -19,13 +19,15 @@ EN: `/Users/kk/OOO` is the daily development canonical root (decision **3B**). L
 ### Web（oorgos.org）
 
 - **編集は `/Users/kk/OOO/Web` のみ**（`Community/sites/coming-soon` を優先編集しない）
-- 公開時は Web から直接 Vercel、または `npm run sync-to-community` で Community に戻してからデプロイ
+- 公開時は Web から直接 Vercel、または `npm run sync-to-community:apply` で Community ミラーへ戻してからデプロイ
+- `npm run build` は **Web 自身**へ生成する。Community へは書かない。同期は別コマンド（既定 dry-run、ミラー未コミット変更で停止）
+- 横断規約: [`AGENTS.md`](AGENTS.md)
 
 任意の環境ヘルパー:
 
 ```bash
-source /Users/kk/OOO/dev-env.sh   # OOO_ROOT / ORGOS_HOME を設定（任意）
-cd "$ORGOS_HOME"                 # = /Users/kk/OOO/Core
+source /Users/kk/OOO/dev-env.sh   # スクリプト位置から OOO_ROOT を解決（既存 env は上書きしない）
+cd "$ORGOS_HOME"                 # 既定は <このツリー>/Core
 ```
 
 Core は通常、cwd から `tenants/` を自動検出します（`ORGOS_HOME` / `ORGOS_WORKSPACE` は任意上書き）。

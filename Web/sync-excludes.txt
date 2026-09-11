@@ -1,0 +1,17 @@
+node_modules
+dist
+.next
+tmp
+scratch
+test-results
+.env
+.env.*
+*.pem
+*.key
+_provisional-canvas-web
+package.json
+README.OOO.md
+.DS_Store
+scripts
+sync-excludes.txt
+.git

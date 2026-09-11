@@ -1,0 +1,6 @@
+---
+description: OOO workspace conventions pointer
+alwaysApply: true
+---
+
+Read `AGENTS.md` at the OOO root before editing. Canonical product code is `Core/`, `Community/`, and `Web/` only. Extracts (`Console/`, `Auth/`, top-level `tenants/`, `operations/`) are not write targets. Do not weaken `Core/AGENTS.md`.
