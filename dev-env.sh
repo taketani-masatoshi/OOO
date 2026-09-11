@@ -1,20 +1,26 @@
 #!/usr/bin/env bash
-# Optional helpers for daily work under /Users/kk/OOO (decision 3B).
-# Usage: source /Users/kk/OOO/dev-env.sh
+# Optional helpers for daily work under this OOO tree (decision 3B).
+# Usage: source path/to/dev-env.sh
+#
+# Resolution order (does not override already-set variables):
+#   1. Existing OOO_ROOT / ORGOS_HOME / OOO_CORE / OOO_COMMUNITY / OOO_WEB
+#   2. Directory containing this script (so a worktree copy follows itself)
+#   3. Core workspace detection from cwd remains in Core (orgos-paths.ts)
 #
 # Core auto-detects install/workspace from cwd when run inside Core.
-# ORGOS_HOME / ORGOS_WORKSPACE are optional overrides (see Core/src/lib/orgos-paths.ts).
 # This script does not change git remotes, push, or delete legacy paths.
 
-export OOO_ROOT="/Users/kk/OOO"
-export ORGOS_HOME="${ORGOS_HOME:-/Users/kk/OOO/Core}"
-# Leave ORGOS_WORKSPACE unset by default so cwd (e.g. Core) wins for tenants/.
-# Uncomment only if you intentionally pin workspace away from cwd:
-# export ORGOS_WORKSPACE="/Users/kk/OOO/Core"
+_DEV_ENV_DIR="$(CDPATH= cd -- "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-export OOO_CORE="/Users/kk/OOO/Core"
-export OOO_COMMUNITY="/Users/kk/OOO/Community"
-export OOO_WEB="/Users/kk/OOO/Web"
+export OOO_ROOT="${OOO_ROOT:-$_DEV_ENV_DIR}"
+export ORGOS_HOME="${ORGOS_HOME:-$OOO_ROOT/Core}"
+# Leave ORGOS_WORKSPACE unset by default so cwd (e.g. Core worktree) wins for tenants/.
+# Uncomment only if you intentionally pin workspace away from cwd:
+# export ORGOS_WORKSPACE="$OOO_ROOT/Core"
+
+export OOO_CORE="${OOO_CORE:-$OOO_ROOT/Core}"
+export OOO_COMMUNITY="${OOO_COMMUNITY:-$OOO_ROOT/Community}"
+export OOO_WEB="${OOO_WEB:-$OOO_ROOT/Web}"
 
 echo "OOO_ROOT=$OOO_ROOT"
 echo "ORGOS_HOME=$ORGOS_HOME (Core development root)"

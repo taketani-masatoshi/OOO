@@ -25,7 +25,9 @@
 !/tenants/GIT-POLICY.md
 /runtime-private/**
 !/runtime-private/README.md
-/operations/
+/operations/**
+!/operations/
+!/operations/EXTRACT-NOT-CANONICAL.md
 copy-exclusions.log
 legacy-codex-status-reference.txt
 legacy-community-status.txt

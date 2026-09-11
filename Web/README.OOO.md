@@ -17,15 +17,21 @@ Developers edit **here**, not under `Community/sites/coming-soon`.
 ## Workflow
 
 1. Edit files under `/Users/kk/OOO/Web`.
-2. Deploy from Web, **or** sync back to Community before a Community-rooted Vercel deploy:
+2. Generate into **this** directory (`npm run build`). That step must not write Community.
+3. Deploy from Web, **or** sync the publish mirror in a **separate** step:
 
 ```bash
-cd /Users/kk/OOO/Web
-npm run sync-to-community
+cd Web
+npm run build
+npm run sync-to-community          # dry-run; shows add/update/delete
+# only after reviewing, and never if the mirror is dirty:
+npm run sync-to-community:apply
 # then, if deploying via Community path:
-cd /Users/kk/OOO/Community/sites/coming-soon
+cd ../Community/sites/coming-soon
 npx vercel@latest deploy --prod --yes
 ```
+
+Generation still needs a Community checkout for `packages/shared` (`COMMUNITY_ROOT` if not the sibling `../Community`). It does not use a hardcoded personal home path.
 
 Or deploy directly from Web if the Vercel project points here:
 
@@ -37,8 +43,8 @@ npx vercel@latest deploy --prod --yes
 ## Commands
 
 ```bash
-cd /Users/kk/OOO/Web
-npm run overview:links   # stamps ecosystem/locale assets via Community workspace script
+cd Web
+npm run overview:links   # stamps assets into Web (not Community)
 npm run build
 ```
 
