@@ -1,0 +1,10 @@
+{
+  "name": "@ooo/web-overview",
+  "private": true,
+  "description": "Canonical oorgos.org static overview. Edit here (/Users/kk/OOO/Web). Publish via Vercel from this directory, or sync back to Community/sites/coming-soon when needed.",
+  "scripts": {
+    "overview:links": "npm run overview:links --prefix ../Community",
+    "build": "npm run overview:links && node -e \"console.log('Static site ready — deploy from /Users/kk/OOO/Web (canonical) or sync to Community/sites/coming-soon for Vercel')\"",
+    "sync-to-community": "rsync -a --delete --exclude node_modules --exclude dist --exclude .next --exclude tmp --exclude scratch --exclude test-results --exclude .env --exclude '.env.*' --exclude '*.pem' --exclude '*.key' --exclude _provisional-canvas-web --exclude package.json --exclude README.OOO.md --exclude .DS_Store ./ ../Community/sites/coming-soon/"
+  }
+}

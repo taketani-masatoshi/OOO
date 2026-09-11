@@ -1,0 +1,220 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> prebuild
+> npm run i18n:build -w @os-community/shared
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @os-community/shared@0.1.0 i18n:build
+> node scripts/i18n/build-i18n.mjs
+
+Generated /Users/kk/OOO/Community/packages/shared/src/i18n/generated/bundles.ts (9 locales, 7 namespaces)
+
+> build
+> npm run build -w @os-community/web
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @os-community/web@0.1.0 build
+> npm run i18n:build -w @os-community/shared && next build
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @os-community/shared@0.1.0 i18n:build
+> node scripts/i18n/build-i18n.mjs
+
+Generated /Users/kk/OOO/Community/packages/shared/src/i18n/generated/bundles.ts (9 locales, 7 namespaces)
+   ▲ Next.js 15.5.19
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings in 810ms
+
+../../node_modules/jose/dist/webapi/lib/deflate.js
+A Node.js API is used (CompressionStream at line: 10) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+../../node_modules/jose/dist/webapi/lib/deflate.js
+../../node_modules/jose/dist/webapi/jwe/flattened/decrypt.js
+../../node_modules/jose/dist/webapi/index.js
+../../node_modules/@auth/core/jwt.js
+../../node_modules/@auth/core/lib/init.js
+../../node_modules/@auth/core/lib/index.js
+../../node_modules/@auth/core/index.js
+../../node_modules/next-auth/index.js
+
+../../node_modules/jose/dist/webapi/lib/deflate.js
+A Node.js API is used (DecompressionStream at line: 26) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+../../node_modules/jose/dist/webapi/lib/deflate.js
+../../node_modules/jose/dist/webapi/jwe/flattened/decrypt.js
+../../node_modules/jose/dist/webapi/index.js
+../../node_modules/@auth/core/jwt.js
+../../node_modules/@auth/core/lib/init.js
+../../node_modules/@auth/core/lib/index.js
+../../node_modules/@auth/core/index.js
+../../node_modules/next-auth/index.js
+
+ ✓ Compiled successfully in 4.9s
+   Skipping validation of types
+   Linting ...
+   Collecting page data ...
+   Generating static pages (0/96) ...
+   Generating static pages (24/96) 
+   Generating static pages (48/96) 
+   Generating static pages (72/96) 
+prisma:error 
+Invalid `prisma.module.findMany()` invocation:
+
+
+Can't reach database server at `127.0.0.1:5432`
+
+Please make sure your database server is running at `127.0.0.1:5432`.
+ ✓ Generating static pages (96/96)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                                    Size  First Load JS
+┌ ƒ /                                                         267 B         106 kB
+├ ƒ /_not-found                                               994 B         103 kB
+├ ƒ /about                                                    267 B         106 kB
+├ ƒ /about/[slug]                                             267 B         106 kB
+├ ƒ /about/leadership                                         875 B         107 kB
+├ ƒ /about/memberships                                        267 B         106 kB
+├ ƒ /about/partners                                           267 B         106 kB
+├ ƒ /about/supporters                                         267 B         106 kB
+├ ƒ /academy                                                  268 B         103 kB
+├ ƒ /academy/exams/[bankId]/[formId]                        1.82 kB         108 kB
+├ ● /academy/lessons/[lessonId]                               847 B         107 kB
+├ ƒ /academy/modules/[trackId]/[moduleSlug]/quiz            1.82 kB         108 kB
+├ ● /academy/tracks/[trackId]                                 167 B         106 kB
+├ ƒ /admin                                                    804 B         107 kB
+├ ƒ /admin/certifications/[id]                                702 B         103 kB
+├ ƒ /admin/committees                                         692 B         107 kB
+├ ƒ /admin/committees/[slug]                                19.6 kB         137 kB
+├ ƒ /admin/committees/new                                   1.36 kB         118 kB
+├ ƒ /admin/users                                            2.01 kB         108 kB
+├ ƒ /agents                                                   946 B         107 kB
+├ ƒ /agents/[id]                                              787 B         107 kB
+├ ƒ /api/academy/certifications                               268 B         103 kB
+├ ƒ /api/academy/exams/grade                                  268 B         103 kB
+├ ƒ /api/academy/lessons/[lessonId]                           268 B         103 kB
+├ ƒ /api/academy/progress                                     268 B         103 kB
+├ ƒ /api/academy/tracks                                       268 B         103 kB
+├ ƒ /api/academy/tracks/[trackId]                             268 B         103 kB
+├ ƒ /api/admin/audit/role-changes                             268 B         103 kB
+├ ƒ /api/admin/bootstrap-founder                              268 B         103 kB
+├ ƒ /api/admin/certifications                                 268 B         103 kB
+├ ƒ /api/admin/committees                                     268 B         103 kB
+├ ƒ /api/admin/committees/[slug]/members                      268 B         103 kB
+├ ƒ /api/admin/committees/[slug]/members/[userId]             268 B         103 kB
+├ ƒ /api/admin/committees/sync                                268 B         103 kB
+├ ƒ /api/admin/module-promotions                              268 B         103 kB
+├ ƒ /api/admin/role-requests                                  268 B         103 kB
+├ ƒ /api/admin/users/[id]                                     268 B         103 kB
+├ ƒ /api/admin/users/search                                   268 B         103 kB
+├ ƒ /api/agents/[id]/join                                     268 B         103 kB
+├ ƒ /api/auth/[...nextauth]                                   268 B         103 kB
+├ ƒ /api/certifications/apply                                 268 B         103 kB
+├ ƒ /api/committees/[slug]/chair-nominations                  268 B         103 kB
+├ ƒ /api/committees/[slug]/membership-request                 268 B         103 kB
+├ ƒ /api/committees/[slug]/membership-review                  268 B         103 kB
+├ ƒ /api/github/connect                                       268 B         103 kB
+├ ƒ /api/github/install                                       268 B         103 kB
+├ ƒ /api/github/provision                                     268 B         103 kB
+├ ƒ /api/github/webhook                                       268 B         103 kB
+├ ƒ /api/health                                               268 B         103 kB
+├ ƒ /api/integrations/orgos-connectors/[provider]/callback    268 B         103 kB
+├ ƒ /api/integrations/orgos-connectors/[provider]/start       268 B         103 kB
+├ ƒ /api/integrations/orgos-connectors/[provider]/status      268 B         103 kB
+├ ƒ /api/integrations/orgos-mail/callback                     268 B         103 kB
+├ ƒ /api/integrations/orgos-mail/start                        268 B         103 kB
+├ ƒ /api/integrations/orgos-mail/status                       268 B         103 kB
+├ ƒ /api/locale                                               268 B         103 kB
+├ ƒ /api/module-roles/request                                 268 B         103 kB
+├ ƒ /api/modules/[slug]/promotion-request                     268 B         103 kB
+├ ƒ /api/protocol/governance                                  268 B         103 kB
+├ ƒ /api/protocol/jurisdiction                                268 B         103 kB
+├ ƒ /api/protocol/operators                                   268 B         103 kB
+├ ƒ /api/protocol/readiness                                   268 B         103 kB
+├ ƒ /api/protocol/sla                                         268 B         103 kB
+├ ƒ /api/reviews/module-role-requests                         268 B         103 kB
+├ ƒ /api/user/professional-profile                            268 B         103 kB
+├ ƒ /api/user/profile                                         268 B         103 kB
+├ ƒ /api/wild-modules/register                                268 B         103 kB
+├ ○ /apple-icon.png                                             0 B            0 B
+├ ƒ /certifications                                           267 B         106 kB
+├ ƒ /certifications/apply                                     923 B         103 kB
+├ ƒ /certifications/verify/[no]                               268 B         103 kB
+├ ƒ /committees                                             2.04 kB         119 kB
+├ ƒ /committees/[slug]                                      1.64 kB         107 kB
+├ ƒ /committees/[slug]/review                               1.01 kB         107 kB
+├ ƒ /compliance                                               267 B         106 kB
+├ ƒ /compliance/checklists                                    267 B         106 kB
+├ ƒ /compliance/checklists/[slug]                             267 B         106 kB
+├ ƒ /compliance/professions                                   267 B         106 kB
+├ ƒ /content                                                  267 B         106 kB
+├ ● /content/[id]                                             267 B         106 kB
+├   ├ /content/mission
+├   ├ /content/openness-policy
+├   ├ /content/language-policy
+├   └ [+8 more paths]
+├ ƒ /docs                                                     268 B         103 kB
+├ ƒ /docs/[slug]                                              268 B         103 kB
+├ ƒ /events                                                   267 B         106 kB
+├ ƒ /events/sponsor                                           267 B         106 kB
+├ ƒ /events/submit-talk                                       267 B         106 kB
+├ ƒ /experts                                                  267 B         106 kB
+├ ƒ /getting-started                                        2.38 kB         108 kB
+├ ƒ /github                                                 1.28 kB         107 kB
+├ ƒ /governance                                               267 B         106 kB
+├ ƒ /governance/lifecycle                                     267 B         106 kB
+├ ƒ /governance/openness                                      267 B         106 kB
+├ ƒ /governance/sla                                           828 B         107 kB
+├ ○ /icon.svg                                                   0 B            0 B
+├ ƒ /learn                                                    268 B         103 kB
+├ ƒ /learning                                                 167 B         106 kB
+├ ƒ /legal/[slug]                                             267 B         106 kB
+├ ƒ /login                                                    267 B         106 kB
+├ ƒ /members                                                  267 B         106 kB
+├ ƒ /modules                                                2.34 kB         108 kB
+├ ƒ /modules/[slug]                                         3.17 kB         120 kB
+├ ƒ /mypage                                                   623 B         106 kB
+├ ƒ /newsroom                                                 267 B         106 kB
+├ ƒ /newsroom/media-contacts                                  267 B         106 kB
+├ ƒ /newsroom/press-releases                                  267 B         106 kB
+├ ƒ /ops/console/blocked                                      267 B         106 kB
+├ ƒ /ops/console/start                                        268 B         103 kB
+├ ƒ /protocol/jurisdiction                                    892 B         107 kB
+├ ƒ /protocol/trusted-operators                               267 B         106 kB
+├ ƒ /register                                                 268 B         103 kB
+├ ƒ /research                                                 267 B         106 kB
+├ ƒ /resources/blog                                           267 B         106 kB
+├ ƒ /resources/case-studies                                   267 B         106 kB
+├ ƒ /resources/guides                                         267 B         106 kB
+├ ƒ /resources/publications                                   267 B         106 kB
+├ ƒ /settings/appearance                                    1.17 kB         104 kB
+├ ƒ /settings/connections                                     724 B         109 kB
+├ ƒ /settings/profile                                       1.07 kB         110 kB
+├ ƒ /site-map                                                 267 B         106 kB
+├ ○ /sitemap.xml                                              268 B         103 kB
+├ ƒ /standards                                                267 B         106 kB
+├ ƒ /stewardship                                              267 B         106 kB
+├ ƒ /stewardship/[slug]                                       268 B         103 kB
+├ ƒ /users/[slug]                                             267 B         106 kB
+├ ƒ /wild-modules                                             267 B         106 kB
+└ ƒ /wild-modules/register                                  1.33 kB         104 kB
++ First Load JS shared by all                                102 kB
+  ├ chunks/18-a6801e2fc629b9f0.js                           46.3 kB
+  ├ chunks/87c73c54-24122e7b92478d00.js                     54.2 kB
+  └ other shared chunks (total)                             1.92 kB
+
+
+ƒ Middleware                                                 114 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

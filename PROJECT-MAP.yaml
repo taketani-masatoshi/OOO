@@ -1,0 +1,172 @@
+ooo_root: /Users/kk/OOO
+generated_at: "2026-09-07T07:05:00+09:00"
+updated_at: "2026-09-07T08:51:00+09:00"
+
+root:
+  path: /Users/kk/OOO
+  canonical: true
+  development_canonical: /Users/kk/OOO
+  decision: 3B
+  decision_note: >
+    Human chose 3B (2026-09-07): declare daily development canonical root as /Users/kk/OOO.
+    Do NOT delete legacy paths. GitHub still NOT pushed unless separately approved.
+  legacy_retention: kept for comparison until human deletes
+
+definition: A
+definition_note: >
+  All major verification gates green under /Users/kk/OOO.
+  Development canonical is now /Users/kk/OOO (3B). Legacy trees remain on disk for
+  comparison until a human explicitly deletes them — they are NOT the development canonical.
+
+status:
+  verification_gates_green: true
+  development_canonical_ooo: true
+  github_push: blocked_until_human_approval
+  legacy_deletion: blocked_until_human_signoff
+  full_resync: "2026-09-07 (ooo-full-resync-2026-09-07.md)"
+
+core_selection_rationale: >
+  Both /Users/kk/Documents/Codex and /Users/kk/OS_Steward exist and differ (distinct HEADs:
+  Codex 8e5e9de..., OS_Steward 2fe1941...). OS_Steward has origin
+  https://github.com/taketani-masatoshi/OpenOrgOS.git; Codex has git metadata but no remotes.
+  Per rule "whichever is OpenOrgOS remote origin", migration actual_source = OS_Steward.
+  Preferred Codex path exists but was not selected. OS_Steward dirty work left untouched (copy-only).
+  Post-3B: day-to-day Core development uses /Users/kk/OOO/Core (not legacy OS_Steward).
+
+projects:
+  Core:
+    preferred_source: /Users/kk/Documents/Codex
+    fallback_source: /Users/kk/OS_Steward
+    actual_source: /Users/kk/OS_Steward
+    actual_source_note: >
+      Migration / resync copy source was /Users/kk/OS_Steward. Development now uses /Users/kk/OOO/Core
+      as the daily work tree (3B). Legacy OS_Steward is retained for comparison only — not
+      development canonical. Resync uses rsync -a WITHOUT --delete (exclude .git); OOO-only
+      typecheck fixes in contracts.ts / snapshot-history.ts are re-applied after sync.
+    destination: /Users/kk/OOO/Core
+    development_root: /Users/kk/OOO/Core
+    git_included: true
+    git_policy: copy includes .git; do not modify source; no push from migration
+  Community:
+    actual_source: /Users/kk/OS_Community
+    actual_source_note: >
+      Migration / resync copy source was /Users/kk/OS_Community. Development now uses /Users/kk/OOO/Community
+      as the daily work tree (3B). Legacy OS_Community is retained for comparison only — not
+      development canonical. Resync uses rsync -a WITHOUT --delete (exclude .git).
+    destination: /Users/kk/OOO/Community
+    development_root: /Users/kk/OOO/Community
+    git_included: true
+    git_policy: copy includes .git to preserve remote/history
+  Web:
+    # Official production overview (oorgos.org) — CANONICAL edit path = /Users/kk/OOO/Web
+    official:
+      actual_source: /Users/kk/OOO/Community/sites/coming-soon
+      destination: /Users/kk/OOO/Web
+      development_root: /Users/kk/OOO/Web
+      publish_mirror: /Users/kk/OOO/Community/sites/coming-soon
+      provisional: false
+      hosts: ["oorgos.org", "www.oorgos.org"]
+      note: >
+        Static overview (Vercel Hobby). CANONICAL daily edit path is /Users/kk/OOO/Web
+        (full coming-soon tree). Do NOT prefer editing Community/sites/coming-soon.
+        Publish may deploy from Web directly, or sync Web → Community/sites/coming-soon
+        then Vercel from that path (npm run sync-to-community). See Web/README.OOO.md.
+      git_policy: >
+        Site files may be mirrored into Community git for publish; Web/package.json and
+        README.OOO.md are OOO overlays (canonical tooling docs).
+    provisional_canvas_web:
+      actual_source: /Users/kk/OS_Steward/apps/canvas-web
+      destination: /Users/kk/OOO/Web/_provisional-canvas-web
+      provisional: true
+      note: "Thin branding extract (src/branding.ts); not the Vercel front — retained for reference only"
+      git_policy: no dedicated .git (subtree copy)
+  Console:
+    destination: /Users/kk/OOO/Console
+    development_note: >
+      Console builds via Core monorepo: cd /Users/kk/OOO/Core && npm run wire-console:build
+      (and operator-console:build). Standalone extract vite build is non-goal.
+    completion_path: >
+      Official §7 Console gate: cd /Users/kk/OOO/Core && npm run wire-console:build
+      (and operator-console:build). Standalone extract vite build is non-goal.
+    build_doc: /Users/kk/OOO/Console/BUILD.md
+    sources:
+      - path: /Users/kk/OOO/Core/apps/wire-console
+        dest: /Users/kk/OOO/Console/wire-console
+        also: /Users/kk/OOO/Console/apps/wire-console
+      - path: /Users/kk/OOO/Core/src/lib/wire-console
+        dest: /Users/kk/OOO/Console/wire-console-lib
+        note: "No packages/wire-console-lib; lib lives under src/lib/wire-console"
+      - path: /Users/kk/OOO/Core/src/lib/operator-console
+        dest: /Users/kk/OOO/Console/operator-console-lib
+      - path: /Users/kk/OOO/Core/deploy/operator-console
+        dest: /Users/kk/OOO/Console/deploy/operator-console
+      - path: /Users/kk/OOO/Core/e2e/wire-console*
+        dest: /Users/kk/OOO/Console/e2e/
+      - path: /Users/kk/OOO/Core/apps/shared
+        dest: /Users/kk/OOO/Console/shared
+        also: /Users/kk/OOO/Console/apps/shared
+  Auth:
+    destination: /Users/kk/OOO/Auth
+    contracts: /Users/kk/OOO/Auth/contracts/README.md
+    sources:
+      - /Users/kk/OOO/Core/apps/wire-console/src/webauthn-*.ts
+      - /Users/kk/OOO/Core/src/lib/wire-console/auth/
+      - /Users/kk/OOO/Core/apps/steward-chat/src/{BudgetAuthGate.tsx,webauthn-*.ts}
+      - /Users/kk/OOO/Core/src/lib/steward-chat/auth.ts
+      - /Users/kk/OOO/Community/apps/web/src/auth.ts
+      - /Users/kk/OOO/Community/apps/web/src/auth.config.ts
+      - /Users/kk/OOO/Community/apps/web/src/lib/auth*
+      - /Users/kk/OOO/Community/apps/web/src/lib/identity/
+      - /Users/kk/OOO/Community/apps/web/src/app/api/auth/
+      - /Users/kk/OOO/Community/apps/web/src/middleware.ts
+      - /Users/kk/OOO/Community/scripts/*auth*
+  tenants:
+    actual_source: /Users/kk/OOO/Core/tenants
+    destination: /Users/kk/OOO/tenants
+    development_note: >
+      Day-to-day tenant data for Core CLI is under /Users/kk/OOO/Core/tenants (detected from cwd).
+      Top-level /Users/kk/OOO/tenants is a migration extract for comparison; see tenants/GIT-POLICY.md.
+    git_policy: subtree copy without .git; secrets dirs excluded; see tenants/GIT-POLICY.md
+  operations:
+    actual_source_roots:
+      - /Users/kk/OOO/Core/deploy
+      - /Users/kk/OOO/Core/services
+      - /Users/kk/OOO/Core/scripts
+    destination: /Users/kk/OOO/operations
+  artifacts:
+    destination: /Users/kk/OOO/artifacts
+    note: verify + completion logs in artifacts/reports/
+  runtime-private:
+    destination: /Users/kk/OOO/runtime-private
+    note: local-only; no secrets committed
+
+verification:
+  as_of: "2026-09-07T08:51:00+09:00"
+  report: /Users/kk/OOO/artifacts/reports/verification-2026-09-07.md
+  completion_checklist: /Users/kk/OOO/artifacts/reports/completion-checklist-2026-09-07.md
+  canonical_switch_record: /Users/kk/OOO/artifacts/reports/canonical-switch-3B-2026-09-07.md
+  full_resync_report: /Users/kk/OOO/artifacts/reports/ooo-full-resync-2026-09-07.md
+  results:
+    core_typecheck: PASS
+    core_limited_test_chat_rbac: PASS
+    core_limited_test_static_cli_digests: PASS
+    core_limited_test_pipeline_static_digests: PASS
+    core_validate_demo: PASS
+    core_validate_mal: PASS
+    community_prisma_generate: PASS
+    community_next_build: PASS
+    console_wire_via_core: PASS
+    console_operator_via_core: PASS
+    console_wire_extract_standalone: FAIL
+    web_official_coming_soon: PASS
+    web_slot_overview_links: PASS
+    web_provisional_canvas: N/A
+    sources_unmodified_legacy: PASS
+    github_push: N/A
+  notes:
+    - "Definition A + 3B: gates green; development canonical = /Users/kk/OOO; legacy retained until human deletes"
+    - "mal validate warnings are non-blocking (ISO templates / placeholders / tenant data)"
+    - "Console preferred: cd /Users/kk/OOO/Core && npm run wire-console:build (+ operator-console:build)"
+    - "Standalone Console extract FAIL is documented non-goal in Console/BUILD.md"
+    - "Web CANONICAL edit path: /Users/kk/OOO/Web (full coming-soon). Publish may sync to Community/sites/coming-soon for Vercel"
+    - "GitHub push deferred (BLOCKED_HUMAN / explicit no-push assumption)"

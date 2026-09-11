@@ -1,0 +1,12 @@
+
+> orgos-reference@0.9.0-beta.1 validate
+> node --import tsx src/cli.ts validate
+
+Failed to mount backup destination, error: Error Domain=com.apple.backupd.ErrorDomain Code=17 "Failed to mount destination." UserInfo={NSLocalizedDescription=Failed to mount destination.}
+✓ All data files are valid.
+✓ Active context synced (/Users/kk/OOO/Core/tenants/demo/rules/active_context.md).
+
+⚠ 3 warning(s):
+  data/contracts/CTR-100.yaml: executed status but no executed_date
+  data/executive/mail-triage-queue.yaml: 未作成 — `cp mail-triage-queue.yaml.example mail-triage-queue.yaml`（[data/executive/00-README.md](data/executive/00-README.md)）
+  scratch/executive-backup-last.txt: executive 週次バックアップ未記録 — 初回: echo $(date +%Y-%m-%d) > scratch/executive-backup-last.txt（[backup-procedure.md](docs/executive/backup-procedure.md)）

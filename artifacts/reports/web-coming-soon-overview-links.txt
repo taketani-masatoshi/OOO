@@ -1,0 +1,12 @@
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> overview:links
+> npm run overview:links -w @os-community/shared
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @os-community/shared@0.1.0 overview:links
+> tsx scripts/generate-overview-links.ts
+
+wrote /Users/kk/OOO/Community/sites/coming-soon/ecosystem-links.js
+wrote /Users/kk/OOO/Community/sites/coming-soon/locale-bridge.js

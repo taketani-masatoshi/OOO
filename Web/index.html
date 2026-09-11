@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenOrgOS</title>
+    <meta
+      name="description"
+      content="Too many tools to start. Become an OpenOrgOS Operator (OOO) — deploy, initialize, and run one coherent organizational baseline."
+    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/fonts.css?v=81282475" />
+    <link rel="stylesheet" href="/design-system.css?v=04a815e5" />
+    <link rel="stylesheet" href="/overview.css?v=f727c483" />
+    <script src="/theme-boot.js?v=cba2d61b"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/">OpenOrgOS</a>
+        <div class="header-nav">
+          <a href="/" aria-current="page" data-i18n="navOverview">Overview</a>
+          <a href="/demo" data-nav-optional data-i18n="navDemo">Demo</a>
+          <a
+            href="https://community.oorgos.org/ops/console/start?next=%2F" rel="noopener noreferrer"
+            data-ecosystem-link="consoleStart"
+            data-nav-optional
+            data-i18n="navConsole"
+            >Console</a
+          >
+          <a
+            href="https://community.oorgos.org" rel="noopener noreferrer"
+            data-ecosystem-link="community"
+            data-i18n="navCommunity"
+            >Community</a
+          >
+          <div class="lang-select-wrap">
+            <select id="lang-select" class="lang-select" aria-label="Language">
+              <option value="en">English</option>
+              <option value="ja">日本語</option>
+              <option value="zh">中文</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 data-i18n="heroTitle">For organizations that focus on what matters</h1>
+        <p class="hero-lead" data-i18n="heroLead">
+          Solo founders and early teams need a clear baseline — not another pile of apps and half-finished setups. OpenOrgOS gives one operator path: deploy, initialize, operate.
+        </p>
+        <div class="hero-cta">
+          <a
+            class="btn btn-primary"
+            href="https://community.oorgos.org/ops/console/start?next=%2F" rel="noopener noreferrer"
+            data-ecosystem-link="consoleStart"
+            data-i18n="heroCta"
+            >Open console</a
+          >
+          <a class="btn btn-ghost" href="/demo" data-i18n="heroCtaSecondary">Local demo</a>
+        </div>
+        <p class="hero-lead hero-note" data-i18n="heroConsoleNote">
+          Uses Community sign-in (company Google), then opens your Operator Console. PassKey is optional afterward.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-story">
+      <div class="shell">
+        <p class="section-kicker" data-i18n="storyKicker">The problem</p>
+        <h2 class="section-title" data-i18n="storyTitle">Starting should not require a second career</h2>
+        <p class="section-lead" data-i18n="storyLead">
+          You want to focus on the work that matters. Instead you inherit a pile of tools that never quite become an organization.
+        </p>
+        <p class="story-text" data-i18n="storyBody1">
+          A one-person company. A startup before the first hire. A project that suddenly needs roles, approvals, and a trail someone else can trust.
+        </p>
+        <p class="story-text" data-i18n="storyBody2">
+          OpenOrgOS exists so those beginnings have a coherent operating system for organizational truth — so you can stay focused on what the organization is for.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <p class="section-kicker" data-i18n="pathKicker">The role</p>
+        <h2 class="section-title" data-i18n="pathTitle">Become an OpenOrgOS Operator</h2>
+        <p class="section-lead" data-i18n="pathLead">
+          An OOO leads the practical path: put OrgOS on infrastructure you control, initialize the organization, and keep day-to-day operation auditable.
+        </p>
+        <ol class="path-list">
+          <li class="path-item">
+            <span class="path-num">01</span>
+            <div>
+              <h3 data-i18n="path1Title">Deploy</h3>
+              <p data-i18n="path1Body">
+                Install OrgOS where your data stays under your control. The reference path is documented and intended for a first steward.
+              </p>
+            </div>
+          </li>
+          <li class="path-item">
+            <span class="path-num">02</span>
+            <div>
+              <h3 data-i18n="path2Title">Initialize</h3>
+              <p data-i18n="path2Body">
+                Configure purpose, structure, and roles while you go live — governance is part of setup, not a retrofit after chaos.
+              </p>
+            </div>
+          </li>
+          <li class="path-item">
+            <span class="path-num">03</span>
+            <div>
+              <h3 data-i18n="path3Title">Operate</h3>
+              <p data-i18n="path3Body">
+                Run with a durable trail of decisions. AI agents can draft and explain; humans approve; CLI and Skills execute deterministically.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-story">
+      <div class="shell">
+        <p class="section-kicker" data-i18n="whyKicker">Why OpenOrgOS</p>
+        <h2 class="section-title" data-i18n="whyTitle">A thin protocol. A clear operator path.</h2>
+        <p class="section-lead" data-i18n="whyLead" data-i18n-html>
+          Like a Linux-style split: <strong>one global exchange protocol</strong>, many local rules. You are not buying another all-in-one SaaS stack — you are learning to operate OrgOS.
+        </p>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3 data-i18n="why1Title">Focus on the essentials</h3>
+            <p data-i18n="why1Body">
+              Stop collecting disconnected tools. Start from one baseline for identity, events, authority, and audit inside your tenant.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3 data-i18n="why2Title">Built for operators</h3>
+            <p data-i18n="why2Body">
+              Community learning, install docs, and the OOO pathway exist so a first operator can try the path without waiting for a large IT team.
+            </p>
+          </div>
+          <div class="why-item">
+            <h3 data-i18n="why3Title">Honest scope</h3>
+            <p data-i18n="why3Body">
+              Community registry and operator pathways are live. Cross-org Wire relay and commercial Hub sales are still rolling out — we say what is ready.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-try" id="try">
+      <div class="shell">
+        <p class="section-kicker" data-i18n="tryKicker">Try it</p>
+        <h2 class="section-title" data-i18n="tryTitle">Start your OOO trial path today</h2>
+        <p class="section-lead" data-i18n="tryLead">
+          No purchase required to begin. Use Community to orient, then follow the install and initialization guide on your own infrastructure.
+        </p>
+        <div class="try-panel">
+          <ol class="try-steps">
+            <li>
+              <span class="try-index" aria-hidden="true">1</span>
+              <span data-i18n="tryStep1" data-i18n-html>
+                <strong>Sign in on Community</strong> and open your company console — Chat, Wire, and forecast/actuals on one host.
+              </span>
+            </li>
+            <li>
+              <span class="try-index" aria-hidden="true">2</span>
+              <span data-i18n="tryStep2" data-i18n-html>
+                <strong>Follow OrgOS Install &amp; Digital Twin Setup</strong> — deploy and initialize as the first OOO.
+              </span>
+            </li>
+            <li>
+              <span class="try-index" aria-hidden="true">3</span>
+              <span data-i18n="tryStep3" data-i18n-html>
+                <strong>Optionally apply for OOO certification</strong> when you want a public operator credential.
+              </span>
+            </li>
+          </ol>
+          <a
+            class="btn btn-primary"
+            href="https://community.oorgos.org/ops/console/start?next=%2F" rel="noopener noreferrer"
+            data-ecosystem-link="consoleStart"
+            data-i18n="tryCta"
+            >Open console</a
+          >
+          <p class="try-note" data-i18n="tryNote" data-i18n-html>
+            Also useful:
+            <a rel="noopener noreferrer" href="https://community.oorgos.org/content/iso-37000-orgos">OrgOS and ISO 37000</a>
+            · <a rel="noopener noreferrer" href="https://community.oorgos.org/certifications">Certifications</a>
+            · <a rel="noopener noreferrer" href="https://community.oorgos.org/content/implementation-status">Implementation status</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-join" id="join">
+      <div class="shell">
+        <p class="section-kicker" data-i18n="joinKicker">Talk to a person</p>
+        <h2 class="section-title" data-i18n="joinTitle">Looking for people running a company on their own</h2>
+        <p class="section-lead" data-i18n="joinLead">
+          OpenOrgOS is built and run by one person, for one real company. If you also keep a company running by yourself, I would like to hear how you do it.
+        </p>
+        <ul class="join-points">
+          <li data-i18n="joinPoint1">Send a short email. No form, no sign-up.</li>
+          <li data-i18n="joinPoint2">Best fit: you already handle your own expenses, budget, and approvals.</li>
+        </ul>
+        <a class="btn btn-primary" href="mailto:hello@oorgos.org" data-i18n="joinCta"
+          >Send an email</a
+        >
+        <p class="join-note" data-i18n="joinNote">
+          A person reads every message. Replies may take a few days.
+        </p>
+      </div>
+    </section>
+
+    <section class="community-link">
+      <div class="shell">
+        <div class="community-link-card">
+          <div>
+            <h2 class="community-link-title" data-i18n="communityTitle">OpenOrgOS Community</h2>
+            <p class="community-link-text" data-i18n="communityBody">
+              Trial, login, and modules live on Community. Your company console opens through Community sign-in — this overview page does not probe that server.
+            </p>
+          </div>
+          <a
+            class="btn btn-primary community-visit-btn"
+            href="https://community.oorgos.org" rel="noopener noreferrer"
+            data-ecosystem-link="community"
+            data-i18n="communityVisitBtn"
+            >Visit Community</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="shell site-footer-inner">
+        <span data-i18n="footerCopy">© OpenOrgOS Community</span>
+        <a href="mailto:hello@oorgos.org">hello@oorgos.org</a>
+      </div>
+    </footer>
+
+    <script src="/ecosystem-links.js?v=7278b2c6" defer></script>
+    <script src="/locale-bridge.js?v=e58fe9b1" defer></script>
+    <script src="/overview-i18n.js?v=82596820" defer></script>
+  </body>
+</html>

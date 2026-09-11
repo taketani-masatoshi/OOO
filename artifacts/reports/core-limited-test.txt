@@ -1,0 +1,12 @@
+
+ RUN  v3.2.7 /Users/kk/OOO/Core
+
+Failed to mount backup destination, error: Error Domain=com.apple.backupd.ErrorDomain Code=17 "Failed to mount destination." UserInfo={NSLocalizedDescription=Failed to mount destination.}
+ ✓ tests/chat-rbac.test.ts (4 tests) 3003ms
+   ✓ chat rbac > allows chat:read users to GET the L1-safe validate route  2833ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  05:30:21
+   Duration  5.87s (transform 1.73s, setup 507ms, collect 2.19s, tests 3.00s, environment 0ms, prepare 33ms)
+

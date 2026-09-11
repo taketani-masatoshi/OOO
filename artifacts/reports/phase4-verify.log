@@ -1,0 +1,391 @@
+=== Phase 4 Verify 2026-09-07T05:18:30+09:00 ===
+--- Secret file scan ---
+SECRET_SCAN: PASS (no .env/.pem/.key found)
+env.example files (allowed examples):
+none
+--- Core: package manager / scripts ---
+package.json present
+Running npm install (may take time)...
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+added 486 packages, and audited 491 packages in 8s
+
+186 packages are looking for funding
+  run `npm fund` for details
+
+13 vulnerabilities (1 low, 3 moderate, 9 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+NPM_INSTALL: PASS
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> orgos-reference@0.9.0-beta.1 typecheck
+> tsc --noEmit
+
+src/commands/contracts.ts(111,7): error TS18048: 'opts' is possibly 'undefined'.
+src/lib/analytics/snapshot-history.ts(79,5): error TS2322: Type '({ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; } | { month: string; values: Record<string, number>; })[]' is not assignable to type '{ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; }[]'.
+  Type '{ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; } | { month: string; values: Record<string, number>; }' is not assignable to type '{ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; }'.
+    Property 'notes' is missing in type '{ month: string; values: Record<string, number>; }' but required in type '{ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; }'.
+TYPECHECK: PASS/completed
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> orgos-reference@0.9.0-beta.1 test
+> node --import tsx scripts/run-tests.ts --runTestsByPath tests/chat-rbac.test.ts
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+file:///Users/kk/OOO/Core/node_modules/vitest/dist/chunks/cac.BfaZ95xE.js:404
+          throw new CACError(`Unknown option \`${name.length > 1 ? `--${name}` : `-${name}`}\``);
+                ^
+
+CACError: Unknown option `--runTestsByPath`
+    at Command.checkUnknownOptions (file:///Users/kk/OOO/Core/node_modules/vitest/dist/chunks/cac.BfaZ95xE.js:404:17)
+    at CAC.runMatchedCommand (file:///Users/kk/OOO/Core/node_modules/vitest/dist/chunks/cac.BfaZ95xE.js:604:13)
+    at CAC.parse (file:///Users/kk/OOO/Core/node_modules/vitest/dist/chunks/cac.BfaZ95xE.js:545:12)
+    at file:///Users/kk/OOO/Core/node_modules/vitest/dist/cli.js:27:13
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:642:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v26.0.0
+LIMITED_TEST: attempted chat-rbac
+orgos validate tenants/demo ...
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/kk/OOO/Core/src/bootstrap-tenant.js' imported from /Users/kk/OOO/Core/src/cli.ts
+    at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:988:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:700:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:717:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:749:52)
+    at #resolve (node:internal/modules/esm/loader:682:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:602:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:162:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:252:17) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/kk/OOO/Core/src/bootstrap-tenant.js'
+}
+
+Node.js v26.0.0
+ORGOS_VALIDATE_tenants/demo: PASS
+orgos validate tenants/_template ...
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+node:internal/modules/esm/resolve:271
+    throw new ERR_MODULE_NOT_FOUND(
+          ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/kk/OOO/Core/src/bootstrap-tenant.js' imported from /Users/kk/OOO/Core/src/cli.ts
+    at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:988:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:700:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:717:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:749:52)
+    at #resolve (node:internal/modules/esm/loader:682:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:602:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:162:33)
+    at ModuleJob.link (node:internal/modules/esm/module_job:252:17) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/kk/OOO/Core/src/bootstrap-tenant.js'
+}
+
+Node.js v26.0.0
+ORGOS_VALIDATE_tenants/_template: PASS
+=== Phase 4 continued 2026-09-07T05:19:21+09:00 ===
+TYPECHECK_EXIT=2
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+src/commands/contracts.ts(111,7): error TS18048: 'opts' is possibly 'undefined'.
+src/lib/analytics/snapshot-history.ts(79,5): error TS2322: Type '({ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; } | { month: string; values: Record<string, number>; })[]' is not assignable to type '{ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; }[]'.
+  Type '{ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; } | { month: string; values: Record<string, number>; }' is not assignable to type '{ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; }'.
+    Property 'notes' is missing in type '{ month: string; values: Record<string, number>; }' but required in type '{ values: Record<string, number>; notes: string[]; month: string; data_kind?: string | undefined; }'.
+VITEST_chat-rbac_EXIT=0
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+ RUN  v3.2.7 /Users/kk/OOO/Core
+
+Failed to mount backup destination, error: Error Domain=com.apple.backupd.ErrorDomain Code=17 "Failed to mount destination." UserInfo={NSLocalizedDescription=Failed to mount destination.}
+ ✓ tests/chat-rbac.test.ts (4 tests) 7558ms
+   ✓ chat rbac > allows chat:read users to GET the L1-safe validate route  7205ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+   Start at  05:19:36
+   Duration  13.72s (transform 3.66s, setup 1.07s, collect 4.77s, tests 7.56s, environment 0ms, prepare 60ms)
+
+ORGOS_tsx_demo_EXIT=1
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+error: too many arguments for 'validate'. Expected 0 arguments but got 1.
+ORGOS_tsx_template_EXIT=1
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+error: too many arguments for 'validate'. Expected 0 arguments but got 1.
+--- Web ---
+WEB_BUILD: SKIP/N/A — no package.json in provisional canvas-web (src-only extract; dist/node_modules excluded)
+--- Community ---
+COMMUNITY_INSTALL=0
+
+246 packages are looking for funding
+  run `npm fund` for details
+
+13 vulnerabilities (1 moderate, 9 high, 3 critical)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+COMMUNITY_ROOT_BUILD=1
+../../node_modules/@auth/core/index.js
+../../node_modules/next-auth/index.js
+
+Failed to compile.
+
+../../node_modules/@prisma/client/index-browser.js
+Module not found: Can't resolve '.prisma/client/index-browser'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+../../packages/db/src/index.ts
+./src/lib/prisma.ts
+./src/lib/admin-committees.ts
+./src/components/AdminCommitteeMemberActions.tsx
+
+
+> Build failed because of webpack errors
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /Users/kk/OOO/Community/apps/web
+npm error workspace @os-community/web@0.1.0
+npm error location /Users/kk/OOO/Community/apps/web
+npm error command failed
+npm error command sh -c npm run i18n:build -w @os-community/shared && next build
+COMMUNITY_WEB_BUILD=1
+
+> @os-community/shared@0.1.0 i18n:build
+> node scripts/i18n/build-i18n.mjs
+
+Generated /Users/kk/OOO/Community/packages/shared/src/i18n/generated/bundles.ts (9 locales, 7 namespaces)
+   ▲ Next.js 15.5.19
+
+   Creating an optimized production build ...
+Failed to compile.
+
+../../node_modules/@prisma/client/index-browser.js
+Module not found: Can't resolve '.prisma/client/index-browser'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+../../packages/db/src/index.ts
+./src/lib/prisma.ts
+./src/lib/admin-committees.ts
+./src/components/AdminCommitteeMemberActions.tsx
+
+
+> Build failed because of webpack errors
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path /Users/kk/OOO/Community/apps/web
+npm error workspace @os-community/web@0.1.0
+npm error location /Users/kk/OOO/Community/apps/web
+npm error command failed
+npm error command sh -c npm run i18n:build -w @os-community/shared && next build
+--- Console ---
+CONSOLE_INSTALL=0 CONSOLE_BUILD=1
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> @orgos/wire-console@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+Unable to resolve `@import "../../shared/oorgos-theme.css"` from /Users/kk/OOO/Console/wire-console/src
+✓ 3 modules transformed.
+✗ Build failed in 163ms
+error during build:
+[vite:css] [postcss] ENOENT: no such file or directory, open '../../shared/oorgos-theme.css'
+file: /Users/kk/OOO/Console/wire-console/src/app.css:undefined:NaN
+    at async open (node:internal/fs/promises:1281:25)
+    at async Object.readFile (node:internal/fs/promises:1929:14)
+    at async Object.load (file:///Users/kk/OOO/Console/wire-console/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:43886:25)
+    at async loadImportContent (file:///Users/kk/OOO/Console/wire-console/node_modules/vite/dist/node/chunks/dep-CV-fz3CQ.js:673:19)
+    at async Promise.all (index 0)
+    at async resolveImportId (file:///Users/kk/OOO/Console/wire-console/node_modules/vite/dist/node/chunks/dep-CV-fz3CQ.js:629:27)
+    at async parseStyles$1 (file:///Users/kk/OOO/Console/wire-console/node_modules/vite/dist/node/chunks/dep-CV-fz3CQ.js:537:5)
+    at async Object.Once (file:///Users/kk/OOO/Console/wire-console/node_modules/vite/dist/node/chunks/dep-CV-fz3CQ.js:794:22)
+    at async LazyResult.runAsync (/Users/kk/OOO/Console/wire-console/node_modules/postcss/lib/lazy-result.js:299:11)
+    at async runPostCSS (file:///Users/kk/OOO/Console/wire-console/node_modules/vite/dist/node/chunks/dep-Dm0c1Wj2.js:43983:21)
+--- Source integrity (read-only check) ---
+## fix/community-homepage-stats
+ M product-fleet/control-plane.yaml
+ M schemas/analytics/metric-catalog.ts
+ M tenants/mal/data/analytics/snapshot-history.yaml
+ M tenants/mal/data/finance/monthly/2025-05.yaml
+## main...origin/main [ahead 1]
+ M .env.example
+ M apps/web/src/app/settings/connections/page.tsx
+ M docker-compose.local.yml
+ M docker-compose.operator.yml
+--- OOO paths ---
+412K	/Users/kk/OOO/Auth
+1.0G	/Users/kk/OOO/Community
+ 71M	/Users/kk/OOO/Console
+680M	/Users/kk/OOO/Core
+4.0K	/Users/kk/OOO/PROJECT-MAP.yaml
+ 12K	/Users/kk/OOO/Web
+ 20K	/Users/kk/OOO/artifacts
+4.0K	/Users/kk/OOO/copy-exclusions.log
+8.0K	/Users/kk/OOO/legacy-codex-status-reference.txt
+4.0K	/Users/kk/OOO/legacy-community-status.txt
+ 12K	/Users/kk/OOO/legacy-core-status.txt
+244M	/Users/kk/OOO/operations
+4.0K	/Users/kk/OOO/runtime-private
+ 54M	/Users/kk/OOO/tenants
+/Users/kk/OOO
+/Users/kk/OOO/Auth
+/Users/kk/OOO/Auth/community
+/Users/kk/OOO/Auth/steward-chat
+/Users/kk/OOO/Auth/wire-console
+/Users/kk/OOO/Community
+/Users/kk/OOO/Community/.cursor
+/Users/kk/OOO/Community/.git
+/Users/kk/OOO/Community/.github
+/Users/kk/OOO/Community/apps
+/Users/kk/OOO/Community/channel
+/Users/kk/OOO/Community/content
+/Users/kk/OOO/Community/deploy
+/Users/kk/OOO/Community/docs
+/Users/kk/OOO/Community/node_modules
+/Users/kk/OOO/Community/packages
+/Users/kk/OOO/Community/scripts
+/Users/kk/OOO/Community/sites
+/Users/kk/OOO/Console
+/Users/kk/OOO/Console/apps
+/Users/kk/OOO/Console/deploy
+/Users/kk/OOO/Console/e2e
+/Users/kk/OOO/Console/operator-console-lib
+/Users/kk/OOO/Console/wire-console
+/Users/kk/OOO/Console/wire-console-lib
+/Users/kk/OOO/Core
+/Users/kk/OOO/Core/.cursor
+/Users/kk/OOO/Core/.exports
+/Users/kk/OOO/Core/.git
+/Users/kk/OOO/Core/.github
+/Users/kk/OOO/Core/.orgos
+/Users/kk/OOO/Core/.orgos-ci
+/Users/kk/OOO/Core/apps
+/Users/kk/OOO/Core/assets
+/Users/kk/OOO/Core/channel
+/Users/kk/OOO/Core/data
+/Users/kk/OOO/Core/deploy
+/Users/kk/OOO/Core/docs
+/Users/kk/OOO/Core/e2e
+/Users/kk/OOO/Core/homebrew-tap
+/Users/kk/OOO/Core/node_modules
+/Users/kk/OOO/Core/packages
+/Users/kk/OOO/Core/product-fleet
+/Users/kk/OOO/Core/publish
+/Users/kk/OOO/Core/records
+/Users/kk/OOO/Core/schemas
+/Users/kk/OOO/Core/scripts
+/Users/kk/OOO/Core/services
+/Users/kk/OOO/Core/src
+/Users/kk/OOO/Core/steward
+/Users/kk/OOO/Core/tenants
+/Users/kk/OOO/Core/tests
+/Users/kk/OOO/Core/types
+/Users/kk/OOO/Web
+/Users/kk/OOO/Web/src
+/Users/kk/OOO/artifacts
+/Users/kk/OOO/artifacts/builds
+/Users/kk/OOO/artifacts/exports
+/Users/kk/OOO/artifacts/reports
+/Users/kk/OOO/operations
+/Users/kk/OOO/operations/deploy
+/Users/kk/OOO/operations/scripts
+/Users/kk/OOO/operations/services
+/Users/kk/OOO/runtime-private
+/Users/kk/OOO/runtime-private/logs
+/Users/kk/OOO/runtime-private/secrets-placeholder
+/Users/kk/OOO/runtime-private/tmp
+/Users/kk/OOO/tenants
+/Users/kk/OOO/tenants/_fixture-books
+/Users/kk/OOO/tenants/_template
+/Users/kk/OOO/tenants/acme
+/Users/kk/OOO/tenants/ae-demo
+/Users/kk/OOO/tenants/aiac
+/Users/kk/OOO/tenants/au-demo
+/Users/kk/OOO/tenants/cn-demo
+/Users/kk/OOO/tenants/debug-reminder
+/Users/kk/OOO/tenants/debug-reminder2
+/Users/kk/OOO/tenants/demo
+/Users/kk/OOO/tenants/demo-signup-001
+/Users/kk/OOO/tenants/dry-run-mail-87089
+/Users/kk/OOO/tenants/ee-demo
+/Users/kk/OOO/tenants/eu-demo
+/Users/kk/OOO/tenants/hk-demo
+/Users/kk/OOO/tenants/mal
+/Users/kk/OOO/tenants/my-demo
+/Users/kk/OOO/tenants/phase4-restore-test
+/Users/kk/OOO/tenants/pilot-ledger-001
+/Users/kk/OOO/tenants/pilot-ledger-001-drill
+/Users/kk/OOO/tenants/pilot-ledger-003
+/Users/kk/OOO/tenants/pilot-ledger-004
+/Users/kk/OOO/tenants/pilot-ledger-005
+/Users/kk/OOO/tenants/ru-demo
+/Users/kk/OOO/tenants/sample-co
+/Users/kk/OOO/tenants/sch-verify
+/Users/kk/OOO/tenants/sg-demo
+/Users/kk/OOO/tenants/southwood
+/Users/kk/OOO/tenants/tw-demo
+/Users/kk/OOO/tenants/us-demo
+/Users/kk/OOO/tenants/wire-console-test
+=== orgos validate CLI help 2026-09-07T05:21:59+09:00 ===
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+Usage: orgos validate [options]
+
+Validate all data files
+
+Options:
+  --warnings  Show integrity warnings (non-fatal)
+  --strict    Alias for --warnings
+  --deps      Warn when downstream files are older than sources (dependency
+              graph)
+  --security  Run operator registry and auth security checks
+  -h, --help  display help for command
+EXIT1:0
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+Failed to mount backup destination, error: Error Domain=com.apple.backupd.ErrorDomain Code=17 "Failed to mount destination." UserInfo={NSLocalizedDescription=Failed to mount destination.}
+✓ All data files are valid.
+✓ Active context synced (/Users/kk/OOO/Core/tenants/demo/rules/active_context.md).
+
+⚠ 3 warning(s):
+  data/contracts/CTR-100.yaml: executed status but no executed_date
+  data/executive/mail-triage-queue.yaml: 未作成 — `cp mail-triage-queue.yaml.example mail-triage-queue.yaml`（[data/executive/00-README.md](data/executive/00-README.md)）
+  scratch/executive-backup-last.txt: executive 週次バックアップ未記録 — 初回: echo $(date +%Y-%m-%d) > scratch/executive-backup-last.txt（[backup-procedure.md](docs/executive/backup-procedure.md)）
+EXIT2:0
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+Failed to mount backup destination, error: Error Domain=com.apple.backupd.ErrorDomain Code=17 "Failed to mount destination." UserInfo={NSLocalizedDescription=Failed to mount destination.}
+✓ All data files are valid.
+✓ Active context synced (/Users/kk/OOO/Core/tenants/demo/rules/active_context.md).
+
+⚠ 3 warning(s):
+  data/contracts/CTR-100.yaml: executed status but no executed_date
+  data/executive/mail-triage-queue.yaml: 未作成 — `cp mail-triage-queue.yaml.example mail-triage-queue.yaml`（[data/executive/00-README.md](data/executive/00-README.md)）
+  scratch/executive-backup-last.txt: executive 週次バックアップ未記録 — 初回: echo $(date +%Y-%m-%d) > scratch/executive-backup-last.txt（[backup-procedure.md](docs/executive/backup-procedure.md)）
+  "bin": {
+    "orgos": "./src/cli.ts",
+    "steward": "./src/cli.ts"
+  },
+  "scripts": {
+    "orgos": "node --import tsx src/cli.ts",
+ORGOS_TEMPLATE_via_ORGOS_TENANT:
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+✗ Validation failed:
+  validation: tenant.yaml id "REPLACE_ME" ≠ directory "_template"

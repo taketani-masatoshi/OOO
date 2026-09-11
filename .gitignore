@@ -1,0 +1,32 @@
+.DS_Store
+**/.DS_Store
+**/node_modules/
+**/.next/
+**/dist/
+**/target/
+**/.vercel/
+
+# secrets and local env
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.secret
+**/*.env
+!**/*.env.example
+
+# nested product checkouts are git submodules, not regular trees
+# (do not `git add` these directories as files)
+
+# local-only extracts / runtime
+/tenants/**
+!/tenants/GIT-POLICY.md
+/runtime-private/**
+!/runtime-private/README.md
+/operations/
+copy-exclusions.log
+legacy-codex-status-reference.txt
+legacy-community-status.txt
+legacy-core-status.txt

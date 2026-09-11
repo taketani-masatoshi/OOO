@@ -1,0 +1,129 @@
+/* Shared Operator Console top shell — 予実 / Wire / 組織図 / エージェント */
+
+.ops-shell {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+/* Agent chat pages: lock shell to viewport so the composer never scrolls away */
+.ops-shell:has(.agent-chat) {
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+.ops-shell-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: var(--header-h);
+  padding: 0 var(--page-gutter);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.ops-shell-brand {
+  font-family: var(--font-display, Newsreader, Georgia, serif);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
+  flex-shrink: 0;
+}
+
+.ops-shell-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding-bottom: var(--space-1);
+}
+
+.ops-shell-tab {
+  flex-shrink: 0;
+}
+
+.ops-shell-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.ops-shell-operator {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ops-shell-settings {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-h-sm);
+  height: var(--control-h-sm);
+  border-radius: var(--radius-pill);
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.ops-shell-settings:hover {
+  color: var(--ink);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.ops-shell-settings.is-active {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.ops-shell-settings-icon {
+  display: block;
+}
+
+.ops-shell-signout {
+  flex-shrink: 0;
+}
+
+.ops-shell-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  .ops-shell-header {
+    flex-wrap: wrap;
+    padding: var(--space-2) var(--page-gutter-sm);
+    gap: var(--space-2);
+  }
+
+  .ops-shell-nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .ops-shell-operator {
+    max-width: 140px;
+  }
+}

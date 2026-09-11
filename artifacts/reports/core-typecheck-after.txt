@@ -1,0 +1,4 @@
+
+> orgos-reference@0.9.0-beta.1 typecheck
+> tsc --noEmit
+

@@ -1,0 +1,6 @@
+[submodule "Core"]
+	path = Core
+	url = https://github.com/taketani-masatoshi/OpenOrgOS.git
+[submodule "Community"]
+	path = Community
+	url = https://github.com/taketani-masatoshi/OS_Community.git

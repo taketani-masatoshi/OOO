@@ -1,0 +1,18 @@
+=== vitest chat-rbac + digests ===
+
+ RUN  v3.2.7 /Users/kk/OOO/Core
+
+ ✓ tests/static-cli-digests.test.ts (6 tests) 1849ms
+   ✓ static CLI digests > analytics payload exposes monthly snapshots and generate_hint  531ms
+   ✓ static CLI digests > writes tax/contracts/sales digests and loads static slots  871ms
+ ✓ tests/pipeline-static-digests.test.ts (4 tests) 183ms
+Failed to mount backup destination, error: Error Domain=com.apple.backupd.ErrorDomain Code=17 "Failed to mount destination." UserInfo={NSLocalizedDescription=Failed to mount destination.}
+ ✓ tests/chat-rbac.test.ts (4 tests) 3320ms
+   ✓ chat rbac > allows chat:read users to GET the L1-safe validate route  3122ms
+
+ Test Files  3 passed (3)
+      Tests  14 passed (14)
+   Start at  05:37:40
+   Duration  10.89s (transform 2.69s, setup 1.05s, collect 3.94s, tests 5.35s, environment 0ms, prepare 93ms)
+
+EXIT:0
