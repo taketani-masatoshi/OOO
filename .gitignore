@@ -20,14 +20,16 @@
 # nested product checkouts are git submodules, not regular trees
 # (do not `git add` these directories as files)
 
-# local-only extracts / runtime
+# Tenant workspace — never post to GitHub (see tenants/GIT-POLICY.md)
 /tenants/**
 !/tenants/GIT-POLICY.md
+**/tenants/*/data/
+**/tenants/*/docs/
+**/tenants/*/records/
+**/tenants/*/scratch/
 /runtime-private/**
 !/runtime-private/README.md
-/operations/**
-!/operations/
-!/operations/EXTRACT-NOT-CANONICAL.md
+/operations/
 copy-exclusions.log
 legacy-codex-status-reference.txt
 legacy-community-status.txt

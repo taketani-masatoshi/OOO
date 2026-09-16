@@ -3,4 +3,4 @@ description: OOO workspace conventions pointer
 alwaysApply: true
 ---
 
-Read `AGENTS.md` at the OOO root before editing. Canonical product code is `Core/`, `Community/`, and `Web/` only. Extracts (`Console/`, `Auth/`, top-level `tenants/`, `operations/`) are not write targets. Do not weaken `Core/AGENTS.md`.
+Read `AGENTS.md` and `PROJECT-MAP.yaml` first. Paths are repo-relative. The umbrella is `kind: workspace` — edit only `root.edit_paths`. Product edits are `Core/`, `Community/`, and `Web/` (`kind: product`, `edit: true`). Extracts live under `extracts/` (auth, console, provisional-canvas-web, optional operations) and are not write targets. Do not weaken `Core/AGENTS.md`.

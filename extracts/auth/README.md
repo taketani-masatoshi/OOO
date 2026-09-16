@@ -1,5 +1,7 @@
 # Auth (OOO extract)
 
+**Not canonical. Do not edit.** Path: `extracts/auth/`. 正本は `Core/` と `Community/` の認証実装。案内: [EXTRACT-NOT-CANONICAL.md](./EXTRACT-NOT-CANONICAL.md)。
+
 Curated copy of authentication-related sources from Core (OpenOrgOS / OS_Steward) and Community.
 
 ## Layout
