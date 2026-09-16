@@ -1,10 +1,30 @@
 ooo_root: /Users/kk/OOO
 generated_at: "2026-09-07T07:05:00+09:00"
-updated_at: "2026-09-07T08:51:00+09:00"
+updated_at: "2026-09-16T09:30:00+09:00"
+
+# Machine + human layout contract. Edit only when kind=product and edit=true.
+layout:
+  kinds: [product, extract, archive, generated, private]
+  rule: >
+    One canonical home per concern. Do not edit extract/archive/private paths.
+    generated is append-only reports, not product source. If unsure, do not edit.
+  git_roots:
+    - path: /
+      git: ooo
+      remote: https://github.com/taketani-masatoshi/OOO.git
+    - path: Core
+      git: openorgos
+      remote: https://github.com/taketani-masatoshi/OpenOrgOS.git
+    - path: Community
+      git: os_community
+      remote: https://github.com/taketani-masatoshi/OS_Community.git
 
 root:
   path: /Users/kk/OOO
+  kind: product
   canonical: true
+  edit: true
+  git: ooo
   development_canonical: /Users/kk/OOO
   decision: 3B
   decision_note: >
@@ -45,6 +65,10 @@ projects:
       typecheck fixes in contracts.ts / snapshot-history.ts are re-applied after sync.
     destination: /Users/kk/OOO/Core
     development_root: /Users/kk/OOO/Core
+    kind: product
+    canonical: true
+    edit: true
+    git: openorgos
     git_included: true
     git_policy: copy includes .git; do not modify source; no push from migration
   Community:
@@ -55,15 +79,25 @@ projects:
       development canonical. Resync uses rsync -a WITHOUT --delete (exclude .git).
     destination: /Users/kk/OOO/Community
     development_root: /Users/kk/OOO/Community
+    kind: product
+    canonical: true
+    edit: true
+    git: os_community
     git_included: true
     git_policy: copy includes .git to preserve remote/history
   Web:
-    # Official production overview (oorgos.org) — CANONICAL edit path = /Users/kk/OOO/Web
     official:
       actual_source: /Users/kk/OOO/Community/sites/coming-soon
       destination: /Users/kk/OOO/Web
       development_root: /Users/kk/OOO/Web
+      kind: product
+      canonical: true
+      edit: true
+      git: ooo
       publish_mirror: /Users/kk/OOO/Community/sites/coming-soon
+      publish_mirror_kind: generated
+      publish_mirror_canonical: false
+      publish_mirror_edit: false
       provisional: false
       hosts: ["oorgos.org", "www.oorgos.org"]
       note: >
@@ -77,11 +111,17 @@ projects:
     provisional_canvas_web:
       actual_source: /Users/kk/OS_Steward/apps/canvas-web
       destination: /Users/kk/OOO/Web/_provisional-canvas-web
+      kind: extract
+      canonical: false
+      edit: false
       provisional: true
       note: "Thin branding extract (src/branding.ts); not the Vercel front — retained for reference only"
       git_policy: no dedicated .git (subtree copy)
   Console:
     destination: /Users/kk/OOO/Console
+    kind: extract
+    canonical: false
+    edit: false
     development_note: >
       Console builds via Core monorepo: cd /Users/kk/OOO/Core && npm run wire-console:build
       (and operator-console:build). Standalone extract vite build is non-goal.
@@ -107,6 +147,9 @@ projects:
         also: /Users/kk/OOO/Console/apps/shared
   Auth:
     destination: /Users/kk/OOO/Auth
+    kind: extract
+    canonical: false
+    edit: false
     contracts: /Users/kk/OOO/Auth/contracts/README.md
     sources:
       - /Users/kk/OOO/Core/apps/wire-console/src/webauthn-*.ts
@@ -123,6 +166,10 @@ projects:
   tenants:
     actual_source: /Users/kk/OOO/Core/tenants
     destination: /Users/kk/OOO/tenants
+    kind: extract
+    canonical: false
+    edit: false
+    live_data: /Users/kk/OOO/Core/tenants
     development_note: >
       Day-to-day tenant data for Core CLI is under /Users/kk/OOO/Core/tenants (detected from cwd).
       Top-level /Users/kk/OOO/tenants is a migration extract for comparison; see tenants/GIT-POLICY.md.
@@ -133,12 +180,32 @@ projects:
       - /Users/kk/OOO/Core/services
       - /Users/kk/OOO/Core/scripts
     destination: /Users/kk/OOO/operations
+    kind: extract
+    canonical: false
+    edit: false
   artifacts:
     destination: /Users/kk/OOO/artifacts
+    kind: generated
+    canonical: false
+    edit: true
     note: verify + completion logs in artifacts/reports/
   runtime-private:
     destination: /Users/kk/OOO/runtime-private
+    kind: private
+    canonical: false
+    edit: false
     note: local-only; no secrets committed
+  archive:
+    kind: archive
+    canonical: false
+    edit: false
+    paths:
+      - MIGRATION-REPORT.md
+      - copy-exclusions.log
+      - legacy-codex-status-reference.txt
+      - legacy-community-status.txt
+      - legacy-core-status.txt
+    note: Migration archaeology. Not current how-to. Do not treat as edit targets.
 
 verification:
   as_of: "2026-09-07T08:51:00+09:00"
@@ -170,3 +237,4 @@ verification:
     - "Standalone Console extract FAIL is documented non-goal in Console/BUILD.md"
     - "Web CANONICAL edit path: /Users/kk/OOO/Web (full coming-soon). Publish may sync to Community/sites/coming-soon for Vercel"
     - "GitHub push deferred (BLOCKED_HUMAN / explicit no-push assumption)"
+    - "layout.kinds: product=edit Core/Community/Web; extract=Auth/Console/operations/top tenants; generated=artifacts; private=runtime-private"

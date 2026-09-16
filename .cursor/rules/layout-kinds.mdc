@@ -1,0 +1,19 @@
+---
+description: 人と AI 向けフォルダ kind（正本は Core/Community/Web のみ）
+alwaysApply: true
+---
+
+# フォルダ構成
+
+最初に `AGENTS.md` と `PROJECT-MAP.yaml` を読む。`kind` は product / extract / archive / generated / private。
+
+1. 関心事の正本は1つ。`kind: product` かつ `edit: true` だけ直す。
+2. フォルダ名は役割。履歴は `archive`。
+3. 同じ階層の extract を product と同等に扱わない。
+4. Git 根は傘 OOO、`Core/`、`Community/` の3つ。
+5. `artifacts/` は generated。`runtime-private/` は private。
+6. テナント実データは `Core/tenants/<id>/` のみ。傘 `tenants/` は方針文書以外載せない。
+7. 入口はルート `AGENTS.md` と `PROJECT-MAP.yaml`。日付付き報告は `artifacts/reports/`。
+8. 傘の説明は浅く。製品内部の深さは各リポに任せる。
+9. パス互換の二重配置（例: `Console/apps/`）は正本にしない。
+10. 迷ったら直さない。extract への編集は拒否する。

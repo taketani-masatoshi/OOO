@@ -1,0 +1,7 @@
+---
+description: OOO workspace conventions pointer
+alwaysApply: true
+---
+
+Read `AGENTS.md` and `PROJECT-MAP.yaml` before editing. `kind` is product / extract / archive / generated / private. Edit only `kind: product` with `edit: true` (`Core/`, `Community/`, `Web/`). Extracts (`Auth/`, `Console/`, `operations/`, top-level `tenants/` data) are not write targets. Do not weaken `Core/AGENTS.md`.
+
