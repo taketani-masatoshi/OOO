@@ -216,6 +216,14 @@ html:lang(zh) .section-kicker {
   font-size: var(--text-sm);
 }
 
+.usecase-note {
+  margin-top: var(--space-7);
+}
+
+#usecase .hero-cta {
+  margin-top: var(--space-5);
+}
+
 .try-panel {
   margin-top: var(--space-7);
   padding: var(--space-6);
