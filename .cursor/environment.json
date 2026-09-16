@@ -1,0 +1,17 @@
+{
+  "name": "OOO umbrella (Core + Community + Web)",
+  "user": "ubuntu",
+  "install": "bash scripts/cloud-agent-install.sh",
+  "start": "bash scripts/cloud-agent-start.sh",
+  "terminals": [
+    {
+      "name": "community-web",
+      "command": "cd Community && npm run i18n:build -w @os-community/shared && set -a && . ./.env && set +a && AUTH_URL=http://localhost:3000 NEXT_PUBLIC_SITE_URL=http://localhost:3000 npm run dev -w @os-community/web"
+    },
+    {
+      "name": "web-overview",
+      "command": "cd Web && python3 -m http.server 8080 --bind 0.0.0.0"
+    }
+  ],
+  "ports": [3000, 8080]
+}
