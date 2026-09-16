@@ -16,7 +16,7 @@ alwaysApply: true
 
 ## 例外
 
-- `tenants/GIT-POLICY.md` だけ（方針文書）
+- `tenants/GIT-POLICY.md` と `tenants/00-README.md`（方針・案内のみ）
 - 製品の空テンプレート `tenants/_template/` を OpenOrgOS に含める場合は、実テナント名・実データを混ぜない
 
 ## 迷ったら
