@@ -3,16 +3,13 @@
 # Idempotent; tolerates an already-running cluster. Returns once ready.
 set -euo pipefail
 
-echo "==> Starting PostgreSQL cluster (16/main)"
-sudo pg_ctlcluster 16 main start 2>/dev/null || true
+ROOT="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]:-$0}")/.." && pwd)"
+# shellcheck source=scripts/lib/postgres.sh
+source "$ROOT/scripts/lib/postgres.sh"
 
-for _ in $(seq 1 30); do
-  if nc -z localhost 5432 2>/dev/null; then
-    echo "==> PostgreSQL is ready on localhost:5432"
-    exit 0
-  fi
-  sleep 1
-done
-
-echo "PostgreSQL did not become ready on localhost:5432 in time." >&2
-exit 1
+require_sudo
+pg_start
+pg_wait
+# Re-assert role/database so a lost or rebuilt data directory self-heals
+# instead of leaving the port up but the database missing.
+ensure_role_db
