@@ -1,0 +1,24 @@
+---
+description: テナント情報を GitHub にポストしない
+alwaysApply: true
+---
+
+# GitHub にテナント情報を載せない
+
+対象: `taketani-masatoshi/OOO`、`OpenOrgOS`、`OS_Community`、今後作るリポ。
+
+## 禁止
+
+- `/tenants/` の実データ（抽出コピー含む）
+- `Core/tenants/<tenant-id>/` の実ワークスペース（`data/`、`docs/`、`records/`、チャット、財務、人事、鍵）
+- テナント名付きの秘密・個人情報・口座・鍵・`.env` / `*.pem` / `*.key`
+- コミット依頼があっても、上記パスは stage / commit / push しない
+
+## 例外
+
+- `tenants/GIT-POLICY.md` だけ（方針文書）
+- 製品の空テンプレート `tenants/_template/` を OpenOrgOS に含める場合は、実テナント名・実データを混ぜない
+
+## 迷ったら
+
+載せない。GitHub 向け差分からテナントパスを外し、その旨を伝える。

@@ -1,0 +1,13 @@
+name: no-tenant-post
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Block tenant paths
+        run: bash scripts/forbid-tenant-github-post.sh
