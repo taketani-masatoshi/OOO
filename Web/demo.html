@@ -60,6 +60,33 @@
     <section class="section">
       <div class="shell">
         <div class="panel">
+          <h2 data-i18n="seeTitle">What you will see</h2>
+          <p data-i18n="seeLead">
+            After Docker starts, open the console and walk a morning ops path — no real tenant secrets.
+          </p>
+          <ol class="steps">
+            <li>
+              <span class="step-index" aria-hidden="true">1</span>
+              <span data-i18n="see1" data-i18n-html>
+                <strong>Home</strong> at <code>http://127.0.0.1:9470/</code> — today’s counts first.
+              </span>
+            </li>
+            <li>
+              <span class="step-index" aria-hidden="true">2</span>
+              <span data-i18n="see2" data-i18n-html>
+                <strong>Secretary workbench</strong> at <code>/secretary/workbench/</code> — mail and tasks.
+              </span>
+            </li>
+            <li>
+              <span class="step-index" aria-hidden="true">3</span>
+              <span data-i18n="see3" data-i18n-html>
+                <strong>Inter-org</strong> at <code>/wire/</code> — formal notices waiting for approval.
+              </span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="panel">
           <h2 data-i18n="step1Title">1. Docker</h2>
           <p data-i18n="step1Lead" data-i18n-html>
             Download from the <a href="https://docs.docker.com/desktop/setup/install/mac-install/">official Docker site</a> (Apple silicon).
@@ -99,13 +126,22 @@ docker run --rm --platform linux/amd64 -p 127.0.0.1:9470:9470 ghcr.io/taketani-m
 
         <div class="panel">
           <h2 data-i18n="step3Title">3. Open</h2>
+          <p class="note" data-i18n="step3Lead">
+            Start on the executive home — check today’s counts, then open Secretary and Inter-org from there.
+          </p>
           <div class="urls">
             <div>
-              <strong>Chat</strong> —
+              <strong data-i18n="urlHomeLabel">Home</strong> —
               <a href="http://127.0.0.1:9470/"><code>http://127.0.0.1:9470/</code></a>
             </div>
             <div>
-              <strong>Wire</strong> —
+              <strong data-i18n="urlSecretaryLabel">Secretary</strong> —
+              <a href="http://127.0.0.1:9470/secretary/workbench/"
+                ><code>http://127.0.0.1:9470/secretary/workbench/</code></a
+              >
+            </div>
+            <div>
+              <strong data-i18n="urlWireLabel">Inter-org</strong> —
               <a href="http://127.0.0.1:9470/wire/"
                 ><code>http://127.0.0.1:9470/wire/</code></a
               >
