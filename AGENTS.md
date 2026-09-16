@@ -8,7 +8,7 @@
 
 | 領域 | kind | 編集する | 編集しない |
 |------|------|----------|------------|
-| 傘 | workspace | `edit_paths`（AGENTS、PROJECT-MAP、README、dev-env、`.cursor/rules`、scripts 等） | extract 全体をルート扱いで触ること |
+| 傘 | workspace | `edit_paths`（AGENTS、PROJECT-MAP、README、`.gitignore`、dev-env、`.cursor/rules`、scripts 等） | extract 全体をルート扱いで触ること |
 | Core | product | `Core/`（独立 Git） | レガシー `OS_Steward`、`extracts/` |
 | Community | product | `Community/`（独立 Git） | レガシー `OS_Community` |
 | Web / oorgos.org | product | `Web/` | `Community/sites/coming-soon`（generated ミラー） |
