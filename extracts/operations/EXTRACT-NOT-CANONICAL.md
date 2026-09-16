@@ -13,4 +13,8 @@ Measure drift before trusting the copies:
 ./scripts/check-extract-drift.sh
 ```
 
-Baseline 2026-09-16: `deploy` 2 entries · `scripts` 0 entries.
+Baseline 2026-09-16, measured against Core `b4ae815d7882ea8b90fee1ebd01dff67c7d5a343`
+(the commit the umbrella pinned for `Core` at the time — `git ls-tree HEAD Core`):
+`deploy` 2 entries · `scripts` 0 entries.
+
+These counts only mean anything on a checkout that still has the gitignored payload.
