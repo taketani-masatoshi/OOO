@@ -142,10 +142,11 @@ projects:
     edit: false
     notice: extracts/console/EXTRACT-NOT-CANONICAL.md
     path_parity: >
-      extracts/console/wire-console and extracts/console/apps/wire-console are the same
-      extract for path parity (not two products). Prefer listing wire-console/ as the
-      primary review path; apps/wire-console is compatibility only. Do not delete one
-      side without a separate review.
+      Paths mirror Core so a reviewer can diff side by side: extracts/console/apps/wire-console
+      matches Core/apps/wire-console. The earlier flattened duplicates
+      (extracts/console/wire-console and extracts/console/shared) were byte-identical copies
+      and have been removed.
+    drift_check: scripts/check-extract-drift.sh
     development_note: >
       Console builds via Core monorepo: cd Core && npm run wire-console:build
       (and operator-console:build). Standalone extract vite build is non-goal.
@@ -155,8 +156,7 @@ projects:
     build_doc: extracts/console/BUILD.md
     sources:
       - path: Core/apps/wire-console
-        dest: extracts/console/wire-console
-        also: extracts/console/apps/wire-console
+        dest: extracts/console/apps/wire-console
         role: primary_review_path
       - path: Core/src/lib/wire-console
         dest: extracts/console/wire-console-lib
@@ -168,8 +168,7 @@ projects:
       - path: Core/e2e/wire-console*
         dest: extracts/console/e2e/
       - path: Core/apps/shared
-        dest: extracts/console/shared
-        also: extracts/console/apps/shared
+        dest: extracts/console/apps/shared
   Auth:
     destination: extracts/auth
     kind: extract

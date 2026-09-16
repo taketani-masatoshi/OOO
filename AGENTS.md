@@ -28,5 +28,6 @@
 | テナントを GitHub に載せない | `scripts/forbid-tenant-github-post.sh`（hook + CI `no-tenant-post`） |
 | 地図の契約 | `scripts/check-layout-map.sh`（CI `layout-guard`） |
 | Core の先端衛生 | `Core` で `npm run check:tenant-tip` |
+| extract がどれだけ古いか | `scripts/check-extract-drift.sh`（各 `EXTRACT-NOT-CANONICAL.md` に基準値） |
 
 業務用 AIA の dispatch と開発用 worktree は別。commit / push / 公開・実テナント変更は、この規約を読むだけでは許可されない。
