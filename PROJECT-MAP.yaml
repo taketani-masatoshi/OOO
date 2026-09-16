@@ -1,6 +1,6 @@
 ooo_root: .
 generated_at: "2026-09-07T07:05:00+09:00"
-updated_at: "2026-09-16T13:45:00+09:00"
+updated_at: "2026-09-16T17:55:00+09:00"
 
 # Paths are repository-relative (git rev-parse --show-toplevel).
 # Edit product paths with edit=true, or workspace edit_paths only.
@@ -41,8 +41,10 @@ root:
     - scripts/
     - docs/
     - tenants/GIT-POLICY.md
+    - tenants/00-README.md
     - extracts/README.md
     - archive/README.md
+    - runtime-private/README.md
   development_canonical: .
   decision: 3B
   decision_note: >
@@ -65,23 +67,21 @@ status:
   full_resync: "2026-09-07 (ooo-full-resync-2026-09-07.md)"
 
 core_selection_rationale: >
-  Both /Users/kk/Documents/Codex and /Users/kk/OS_Steward exist and differ (distinct HEADs:
-  Codex 8e5e9de..., OS_Steward 2fe1941...). OS_Steward has origin
-  https://github.com/taketani-masatoshi/OpenOrgOS.git; Codex has git metadata but no remotes.
+  Migration compared two local trees: a Codex checkout (no OpenOrgOS remote) and
+  OS_Steward (origin https://github.com/taketani-masatoshi/OpenOrgOS.git).
   Per rule "whichever is OpenOrgOS remote origin", migration actual_source = OS_Steward.
-  Preferred Codex path exists but was not selected. OS_Steward dirty work left untouched (copy-only).
-  Post-3B: day-to-day Core development uses Core (not legacy OS_Steward).
+  Post-3B: day-to-day Core development uses Core (repo-relative), not legacy OS_Steward.
 
 projects:
   Core:
-    preferred_source: /Users/kk/Documents/Codex
-    fallback_source: /Users/kk/OS_Steward
-    actual_source: /Users/kk/OS_Steward
+    preferred_source: legacy-codex-checkout
+    fallback_source: legacy-OS_Steward
+    actual_source: legacy-OS_Steward
     actual_source_note: >
-      Migration / resync copy source was /Users/kk/OS_Steward. Development now uses Core
-      as the daily work tree (3B). Legacy OS_Steward is retained for comparison only — not
-      development canonical. Resync uses rsync -a WITHOUT --delete (exclude .git); OOO-only
-      typecheck fixes in contracts.ts / snapshot-history.ts are re-applied after sync.
+      Migration / resync copy source was the local OS_Steward tree (OpenOrgOS remote).
+      Development now uses Core as the daily work tree (3B). Legacy OS_Steward is retained
+      for comparison only — not development canonical. Resync uses rsync -a WITHOUT --delete
+      (exclude .git); OOO-only typecheck fixes are re-applied after sync.
     destination: Core
     development_root: Core
     kind: product
@@ -91,11 +91,11 @@ projects:
     git_included: true
     git_policy: copy includes .git; do not modify source; no push from migration
   Community:
-    actual_source: /Users/kk/OS_Community
+    actual_source: legacy-OS_Community
     actual_source_note: >
-      Migration / resync copy source was /Users/kk/OS_Community. Development now uses Community
-      as the daily work tree (3B). Legacy OS_Community is retained for comparison only — not
-      development canonical. Resync uses rsync -a WITHOUT --delete (exclude .git).
+      Migration / resync copy source was the local OS_Community tree. Development now uses
+      Community as the daily work tree (3B). Legacy OS_Community is retained for comparison
+      only — not development canonical. Resync uses rsync -a WITHOUT --delete (exclude .git).
     destination: Community
     development_root: Community
     kind: product
@@ -128,7 +128,7 @@ projects:
         Site files may be mirrored into Community git for publish; Web/package.json and
         README.OOO.md are OOO overlays (canonical tooling docs).
     provisional_canvas_web:
-      actual_source: /Users/kk/OS_Steward/apps/canvas-web
+      actual_source: legacy-OS_Steward/apps/canvas-web
       destination: extracts/provisional-canvas-web
       kind: extract
       canonical: false
@@ -142,6 +142,11 @@ projects:
     canonical: false
     edit: false
     notice: extracts/console/EXTRACT-NOT-CANONICAL.md
+    path_parity: >
+      extracts/console/wire-console and extracts/console/apps/wire-console are the same
+      extract for path parity (not two products). Prefer listing wire-console/ as the
+      primary review path; apps/wire-console is compatibility only. Do not delete one
+      side without a separate review.
     development_note: >
       Console builds via Core monorepo: cd Core && npm run wire-console:build
       (and operator-console:build). Standalone extract vite build is non-goal.
@@ -153,6 +158,7 @@ projects:
       - path: Core/apps/wire-console
         dest: extracts/console/wire-console
         also: extracts/console/apps/wire-console
+        role: primary_review_path
       - path: Core/src/lib/wire-console
         dest: extracts/console/wire-console-lib
         note: "No packages/wire-console-lib; lib lives under src/lib/wire-console"
@@ -193,7 +199,8 @@ projects:
     live_data: Core/tenants
     development_note: >
       Day-to-day tenant data for Core CLI is under Core/tenants (detected from cwd).
-      Umbrella tenants/ tracks GIT-POLICY.md only. Live data is Core/tenants. See tenants/GIT-POLICY.md.
+      Umbrella tenants/ tracks GIT-POLICY.md and 00-README.md only. Live data is Core/tenants.
+      See tenants/GIT-POLICY.md.
     git_policy: subtree copy without .git; secrets dirs excluded; see tenants/GIT-POLICY.md
   operations:
     actual_source_roots:
