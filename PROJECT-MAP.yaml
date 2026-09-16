@@ -33,6 +33,7 @@ root:
     - AGENTS.md
     - PROJECT-MAP.yaml
     - README.md
+    - .gitignore
     - dev-env.sh
     - .cursor/rules/
     - .github/

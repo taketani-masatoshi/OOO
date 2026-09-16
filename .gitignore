@@ -30,6 +30,11 @@
 /runtime-private/**
 !/runtime-private/README.md
 /operations/
+# Optional local extract payload (notice file stays tracked)
+/extracts/operations/deploy/
+/extracts/operations/scripts/
+/extracts/operations/services/
+.dev-tasks/
 copy-exclusions.log
 legacy-codex-status-reference.txt
 legacy-community-status.txt
