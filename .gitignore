@@ -23,6 +23,7 @@
 # Tenant workspace — never post to GitHub (see tenants/GIT-POLICY.md)
 /tenants/**
 !/tenants/GIT-POLICY.md
+!/tenants/00-README.md
 **/tenants/*/data/
 **/tenants/*/docs/
 **/tenants/*/records/

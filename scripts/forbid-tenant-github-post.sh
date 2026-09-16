@@ -7,7 +7,7 @@ if ! git rev-parse --show-toplevel >/dev/null 2>&1; then
   exit 1
 fi
 
-allowed='^tenants/GIT-POLICY\.md$'
+allowed='^tenants/(GIT-POLICY\.md|00-README\.md)$'
 blocked='(^|/)tenants/'
 
 collect() {
@@ -25,6 +25,6 @@ hits="$(collect | grep -E "$blocked" | grep -Ev "$allowed" || true)"
 if [[ -n "$hits" ]]; then
   echo "拒否: テナント情報は GitHub にポストしません。" >&2
   echo "$hits" >&2
-  echo "許可されるのは tenants/GIT-POLICY.md のみです。" >&2
+  echo "許可されるのは tenants/GIT-POLICY.md と tenants/00-README.md のみです。" >&2
   exit 1
 fi
