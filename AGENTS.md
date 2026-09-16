@@ -24,7 +24,7 @@
 
 | 対象 | コマンド |
 |------|----------|
-| clone 直後に1回 | `./scripts/install-hooks.sh`（`core.hooksPath` 未設定だと hook は動かない） |
+| clone 直後に1回 | `./scripts/install-hooks.sh`（`core.hooksPath` 未設定だと hook は動かない。保護されていない git ルートを名指しで報告する） |
 | テナントを GitHub に載せない | `scripts/forbid-tenant-github-post.sh`（hook + CI `no-tenant-post`） |
 | 地図の契約 | `scripts/check-layout-map.sh`（CI `layout-guard`） |
 | Core の先端衛生 | `Core` で `npm run check:tenant-tip` |
