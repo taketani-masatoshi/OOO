@@ -6,10 +6,12 @@
   "terminals": [
     {
       "name": "community-web",
-      "command": "bash scripts/cloud-agent-start.sh && cd Community && npm run i18n:build -w @os-community/shared && set -a && . ./.env && set +a && AUTH_URL=http://localhost:3000 NEXT_PUBLIC_SITE_URL=http://localhost:3000 npm run dev -w @os-community/web"
+      "description": "Community Next.js dev server on http://localhost:3000 (dev only). Ensures .env + PostgreSQL, clears a stale production .next, then runs next dev.",
+      "command": "bash scripts/ensure-community-env.sh && bash scripts/cloud-agent-start.sh && { if [ -f Community/apps/web/.next/BUILD_ID ] && [ ! -f Community/apps/web/.next/routes-manifest.json ]; then rm -rf Community/apps/web/.next; fi; } && cd Community && npm run i18n:build -w @os-community/shared && set -a && . ./.env && set +a && AUTH_URL=http://localhost:3000 NEXT_PUBLIC_SITE_URL=http://localhost:3000 npm run dev -w @os-community/web"
     },
     {
       "name": "web-overview",
+      "description": "Static oorgos.org overview site on http://localhost:8080 (dev preview only; single-threaded http.server).",
       "command": "cd Web && python3 -m http.server 8080 --bind 0.0.0.0"
     }
   ],
