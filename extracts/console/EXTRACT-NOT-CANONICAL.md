@@ -23,6 +23,11 @@ This snapshot is frozen, so it falls behind. Measure before trusting it:
 ./scripts/check-extract-drift.sh
 ```
 
-Baseline 2026-09-16: `apps/wire-console/src` 3 entries · `apps/shared` 2 entries · `e2e` 24 entries.
+Baseline 2026-09-16, measured against Core `b4ae815d7882ea8b90fee1ebd01dff67c7d5a343`
+(the commit the umbrella pinned for `Core` at the time — `git ls-tree HEAD Core`):
+`apps/wire-console/src` 3 entries · `apps/shared` 2 entries · `e2e` 24 entries.
+
+Re-measuring against a different Core commit gives different numbers, so compare
+the SHA above with today's pointer before reading the counts as current.
 
 See `BUILD.md`, `PROJECT-MAP.yaml` (`kind: extract`, `edit: false`), and `AGENTS.md`.

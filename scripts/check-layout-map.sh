@@ -6,6 +6,7 @@ root="$(git rev-parse --show-toplevel)"
 cd "$root"
 
 python3 - <<'PY'
+import subprocess
 import sys
 from pathlib import Path
 
@@ -44,6 +45,25 @@ for rel in root_node.get("edit_paths") or []:
 for lineno, line in enumerate(text.splitlines(), 1):
     if "/Users/" in line or "/home/" in line:
         errors.append(f"absolute machine path at PROJECT-MAP.yaml:{lineno}")
+
+# The same rule applies to the Markdown a reader is told to follow. Only paths we
+# are allowed to edit are in scope: archive/ is deliberate archaeology (see
+# archive/README.md), artifacts/ holds dated snapshots, and extracts/ is edit:false,
+# so rewriting any of those would be worse than leaving the paths alone.
+ABSOLUTE_PATH_EXEMPT = ("archive/", "artifacts/", "extracts/")
+tracked = subprocess.run(
+    ["git", "ls-files", "-z", "*.md"],
+    capture_output=True,
+    text=True,
+    check=True,
+).stdout.split("\0")
+
+for rel in tracked:
+    if not rel or rel.startswith(ABSOLUTE_PATH_EXEMPT):
+        continue
+    for lineno, line in enumerate(Path(rel).read_text().splitlines(), 1):
+        if "/Users/" in line or "/home/" in line:
+            errors.append(f"absolute machine path at {rel}:{lineno}")
 
 
 def walk(node, trail):
