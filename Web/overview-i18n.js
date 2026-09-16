@@ -34,7 +34,7 @@ const copy = {
     morningKicker: "A morning in the console",
     morningTitle: "Ten minutes to run the day",
     morningLead:
-      "After sign-in, Operator Console opens on today’s work — not a pile of protocol screens.",
+      "After sign-in, Operator Console lets you follow secretary, property, and inter-org paths for the day — not a claim that every demo image holds full production MAL data.",
     morning1Title: "See what needs a decision",
     morning1Body:
       "Home (/) lists approvals, mail, property deadlines, and open tasks.",
@@ -128,7 +128,7 @@ const copy = {
     morningKicker: "コンソールの朝",
     morningTitle: "今日を回す 10 分",
     morningLead:
-      "サインイン後、Operator Console はプロトコル一覧ではなく「今日の仕事」から始まります。",
+      "サインイン後、Operator Console で秘書・物件・相手組織の導線を辿れます。デモ映像が本番相当の MAL 全データを持つとは限りません。",
     morning1Title: "判断が必要なものを見る",
     morning1Body:
       "経営ホーム（/）に承認・メール・物件期限・タスクが並びます。",
@@ -219,7 +219,8 @@ const copy = {
       "以持久的决策轨迹运转。AI 代理可起草与解释；人类审批；CLI 与 Skill 确定性执行。",
     morningKicker: "控制台的早晨",
     morningTitle: "十分钟运转一天",
-    morningLead: "登录后，Operator Console 从「今日工作」开始，而不是协议清单。",
+    morningLead:
+      "登录后，可在 Operator Console 沿秘书、物业、对方组织路径走通一天。演示镜像不一定含有完整生产级 MAL 数据。",
     morning1Title: "查看需要决策的事项",
     morning1Body: "首页（/）列出审批、邮件、物业期限与任务。",
     morning2Title: "秘书汇总邮件与任务",

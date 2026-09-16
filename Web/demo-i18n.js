@@ -13,6 +13,8 @@ const copy = {
     seeTitle: "What you will see",
     seeLead:
       "After Docker starts, open the console and walk a morning ops path — no real tenant secrets.",
+    demoScopeNote:
+      "The bundled demo tenant is simplified sample data. It is not a full production MAL dataset.",
     see1: "<strong>Home</strong> at <code>http://127.0.0.1:9470/</code> — today’s counts first.",
     see2: "<strong>Secretary workbench</strong> at <code>/secretary/workbench/</code> — mail and tasks.",
     see3: "<strong>Inter-org</strong> at <code>/wire/</code> — formal notices waiting for approval.",
@@ -51,6 +53,8 @@ const copy = {
     seeTitle: "何が見えるか",
     seeLead:
       "Docker 起動後、コンソールで朝の運用導線を辿れます（実テナントの秘密は出しません）。",
+    demoScopeNote:
+      "同梱のデモテナントは簡易サンプルです。本番相当の MAL 全データではありません。",
     see1: "<strong>経営ホーム</strong> <code>http://127.0.0.1:9470/</code> — まず今日の件数。",
     see2: "<strong>秘書ワークベンチ</strong> <code>/secretary/workbench/</code> — メールとタスク。",
     see3: "<strong>相手組織</strong> <code>/wire/</code> — 正式通知の承認待ち。",
@@ -88,6 +92,7 @@ const copy = {
     lead: "仅支持 Apple silicon Mac（M1–M4）。",
     seeTitle: "你会看到什么",
     seeLead: "Docker 启动后，可在控制台走一遍早晨运营路径（不含真实租户秘密）。",
+    demoScopeNote: "随附演示租户为简化样例，并非完整生产级 MAL 数据。",
     see1: "<strong>首页</strong> <code>http://127.0.0.1:9470/</code> — 先看今日计数。",
     see2: "<strong>秘书工作台</strong> <code>/secretary/workbench/</code> — 邮件与任务。",
     see3: "<strong>对方组织</strong> <code>/wire/</code> — 正式通知待审批。",
