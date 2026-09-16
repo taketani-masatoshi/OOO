@@ -6,7 +6,7 @@
   "terminals": [
     {
       "name": "community-web",
-      "command": "cd Community && npm run i18n:build -w @os-community/shared && set -a && . ./.env && set +a && AUTH_URL=http://localhost:3000 NEXT_PUBLIC_SITE_URL=http://localhost:3000 npm run dev -w @os-community/web"
+      "command": "bash scripts/cloud-agent-start.sh && cd Community && npm run i18n:build -w @os-community/shared && set -a && . ./.env && set +a && AUTH_URL=http://localhost:3000 NEXT_PUBLIC_SITE_URL=http://localhost:3000 npm run dev -w @os-community/web"
     },
     {
       "name": "web-overview",
