@@ -1,0 +1,19 @@
+name: layout-guard
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  map:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Check PROJECT-MAP contract
+        run: bash scripts/check-layout-map.sh
+      - name: Check hook scripts stay executable
+        run: bash scripts/check-hooks-installable.sh

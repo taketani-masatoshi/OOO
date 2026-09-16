@@ -39,7 +39,6 @@ root:
     - .github/
     - .githooks/
     - scripts/
-    - docs/
     - tenants/GIT-POLICY.md
     - tenants/00-README.md
     - extracts/README.md

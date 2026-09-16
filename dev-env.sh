@@ -15,6 +15,10 @@ export OOO_CORE="$OOO_ROOT/Core"
 export OOO_COMMUNITY="$OOO_ROOT/Community"
 export OOO_WEB="$OOO_ROOT/Web"
 
+if [ -d "$OOO_ROOT/.githooks" ] && [ "$(git -C "$OOO_ROOT" config --get core.hooksPath 2>/dev/null)" != ".githooks" ]; then
+  echo "hooks: core.hooksPath is not .githooks — run $OOO_ROOT/scripts/install-hooks.sh"
+fi
+
 echo "OOO_ROOT=$OOO_ROOT"
 echo "ORGOS_HOME=$ORGOS_HOME (Core development root)"
 echo "Community: $OOO_COMMUNITY | Web: $OOO_WEB"

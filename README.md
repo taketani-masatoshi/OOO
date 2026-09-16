@@ -22,9 +22,12 @@
 - 公開時は Web から直接 Vercel、または `npm run sync-to-community` で Community に戻してからデプロイ
 
 ```bash
-source ./dev-env.sh   # このファイル位置から OOO_ROOT を解決（既存 env は上書きしない）
-cd "$ORGOS_HOME"      # 既定は <repo>/Core
+./scripts/install-hooks.sh   # clone 直後に1回（テナント保護 hook を有効化）
+source ./dev-env.sh          # このファイル位置から OOO_ROOT を解決（既存 env は上書きしない）
+cd "$ORGOS_HOME"             # 既定は <repo>/Core
 ```
+
+`core.hooksPath` を設定しないと `.githooks/pre-commit` と `pre-push` は動きません。
 
 Core は通常、cwd から `tenants/` を自動検出します。
 
