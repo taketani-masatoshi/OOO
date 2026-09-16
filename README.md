@@ -72,7 +72,9 @@ git clone --recurse-submodules https://github.com/taketani-masatoshi/OOO.git
 
 **ポスト規則:** テナント情報は GitHub に載せない。傘 `tenants/` で載せるのは `GIT-POLICY.md` と `00-README.md` の2つだけ。`extracts/operations/` の payload と `runtime-private/` も公開しません。
 
-`./scripts/install-hooks.sh` を1回実行すれば、この規則を pre-commit / pre-push が止めます（CI は `no-tenant-post`）。
+`./scripts/install-hooks.sh` を1回実行すれば、傘の pre-commit / pre-push がこの規則を止めます（CI は `no-tenant-post`）。
+
+傘の hook は submodule の境界を越えられないので、`Core/tenants/` は Core 自身の hook が必要です。各 git ルートに何を期待するかは `PROJECT-MAP.yaml` の `layout.git_roots[].hooks` に書いてあり、`install-hooks.sh` は保護されていないルートを名指しで報告します（Community は `tenants/` を持たないので `exempt`）。
 
 ---
 

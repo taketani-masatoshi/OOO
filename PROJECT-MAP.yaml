@@ -12,16 +12,30 @@ layout:
     generated is append-only reports, not product source.
     The umbrella root is workspace, not product: edit only edit_paths.
     If unsure, do not edit.
+  # hooks: expected local guard state per git root. `required` means the root
+  # must ship .githooks; scripts/install-hooks.sh reports any root that does not,
+  # and scripts/check-hooks-installable.sh fails when reality and this field
+  # disagree. A silent skip reads like success, so the expectation is declared.
   git_roots:
     - path: /
       git: ooo
       remote: https://github.com/taketani-masatoshi/OOO.git
+      hooks: required
     - path: Core
       git: openorgos
       remote: https://github.com/taketani-masatoshi/OpenOrgOS.git
+      hooks: required
+      hooks_note: >
+        Core carries tenants/<id>/ live workspaces, which the umbrella hook cannot
+        see across the submodule boundary. Its own hooks land with the tip-guard
+        change; until then Core is unprotected locally.
     - path: Community
       git: os_community
       remote: https://github.com/taketani-masatoshi/OS_Community.git
+      hooks: exempt
+      hooks_note: >
+        Community has no tenants/ tree, so the tenant-post guard has nothing to
+        match. Revisit if tenant data ever lands there.
 
 root:
   path: .
