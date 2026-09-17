@@ -31,6 +31,22 @@ const copy = {
     path3Title: "Operate",
     path3Body:
       "Run with a durable trail of decisions. AI agents can draft and explain; humans approve; CLI and Skills execute deterministically.",
+    morningKicker: "A morning in the console",
+    morningTitle: "Ten minutes to run the day",
+    morningLead:
+      "After sign-in, Operator Console lets you follow secretary, property, and inter-org paths for the day — not a claim that every demo image holds full production MAL data.",
+    morning1Title: "See what needs a decision",
+    morning1Body:
+      "Home (/) lists approvals, mail, property deadlines, and open tasks.",
+    morning2Title: "Secretary bundles mail and tasks",
+    morning2Body:
+      "/secretary/workbench/ keeps human email triage, drafts, and P0 tasks in one place.",
+    morning3Title: "Check property deadlines",
+    morning3Body:
+      "/properties/ shows insurance, permits, and ops-due per property — without guest PII.",
+    morning4Title: "Approve formal notices to other orgs",
+    morning4Body:
+      "Inter-org (/wire/) is the waiting tray for signed contract, invoice, and payment notices.",
     whyKicker: "Why OpenOrgOS",
     whyTitle: "A thin protocol. A clear operator path.",
     whyLead:
@@ -71,6 +87,7 @@ const copy = {
       "Trial, login, and modules live on Community. Your company console opens through Community sign-in — this overview page does not probe that server.",
     communityVisitBtn: "Visit Community",
     footerCopy: "© OpenOrgOS Community",
+    footerGithub: "GitHub",
     langLabel: "Language",
     navOverview: "Overview",
     navDemo: "Demo",
@@ -109,6 +126,22 @@ const copy = {
     path3Title: "運用",
     path3Body:
       "決定の証跡を残して回す。AI エージェントは起草と説明、人間が承認、CLI と Skill が確定的に実行します。",
+    morningKicker: "コンソールの朝",
+    morningTitle: "今日を回す 10 分",
+    morningLead:
+      "サインイン後、Operator Console で秘書・物件・相手組織の導線を辿れます。デモ映像が本番相当の MAL 全データを持つとは限りません。",
+    morning1Title: "判断が必要なものを見る",
+    morning1Body:
+      "経営ホーム（/）に承認・メール・物件期限・タスクが並びます。",
+    morning2Title: "秘書がメールとタスクを束ねる",
+    morning2Body:
+      "/secretary/workbench/ で人間向けメールの triage・下書き・P0 タスクを一画面に。",
+    morning3Title: "物件の期限を確認する",
+    morning3Body:
+      "/properties/ で保険・許可・未対応を物件別に（宿泊者の個情は出しません）。",
+    morning4Title: "相手組織への正式通知を承認する",
+    morning4Body:
+      "相手組織（/wire/）は契約・請求・支払の署名付き通知の待ちトレイです。",
     whyKicker: "なぜ OpenOrgOS か",
     whyTitle: "薄いプロトコル。はっきりしたオペレータ経路。",
     whyLead:
@@ -148,6 +181,7 @@ const copy = {
       "試用・ログイン・モジュールは Community で動きます。会社コンソールは Community サインイン経由で開きます。この概要ページは静的のまま、そちらへ自動接続はしません。",
     communityVisitBtn: "Community へ",
     footerCopy: "© OpenOrgOS Community",
+    footerGithub: "GitHub",
     langLabel: "言語",
     navOverview: "概要",
     navDemo: "デモ",
@@ -185,6 +219,18 @@ const copy = {
     path3Title: "运营",
     path3Body:
       "以持久的决策轨迹运转。AI 代理可起草与解释；人类审批；CLI 与 Skill 确定性执行。",
+    morningKicker: "控制台的早晨",
+    morningTitle: "十分钟运转一天",
+    morningLead:
+      "登录后，可在 Operator Console 沿秘书、物业、对方组织路径走通一天。演示镜像不一定含有完整生产级 MAL 数据。",
+    morning1Title: "查看需要决策的事项",
+    morning1Body: "首页（/）列出审批、邮件、物业期限与任务。",
+    morning2Title: "秘书汇总邮件与任务",
+    morning2Body: "/secretary/workbench/ 集中处理人工邮件分流、草稿与 P0 任务。",
+    morning3Title: "检查物业期限",
+    morning3Body: "/properties/ 按物业显示保险、许可与待办（不含住客个情）。",
+    morning4Title: "批准发给对方组织的正式通知",
+    morning4Body: "对方组织（/wire/）是合同、账单、付款签名通知的等待托盘。",
     whyKicker: "为何选择 OpenOrgOS",
     whyTitle: "精简协议。清晰的运营者路径。",
     whyLead:
@@ -224,6 +270,7 @@ const copy = {
       "试用、登录与模块运行在 Community。公司控制台须通过 Community 登录打开。本概要页保持静态，不会自动探测该服务器。",
     communityVisitBtn: "访问 Community",
     footerCopy: "© OpenOrgOS Community",
+    footerGithub: "GitHub",
     langLabel: "语言",
     navOverview: "概览",
     navDemo: "演示",
