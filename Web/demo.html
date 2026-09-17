@@ -157,18 +157,44 @@ docker run --rm --platform linux/amd64 -p 127.0.0.1:9470:9470 ghcr.io/taketani-m
             <a class="btn btn-ghost" href="/" data-i18n="ctaHome">Back</a>
           </div>
         </div>
+
+        <div class="panel">
+          <h2 data-i18n="sourceTitle">Source</h2>
+          <p data-i18n="sourceLead">
+            Clone or download the public OpenOrgOS reference from GitHub. Live tenant workspaces are not in that repository.
+          </p>
+          <div class="code-block" tabindex="0">
+            <pre><code>git clone https://github.com/taketani-masatoshi/OpenOrgOS.git</code></pre>
+          </div>
+          <div class="actions">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/taketani-masatoshi/OpenOrgOS"
+              rel="noopener noreferrer"
+              data-i18n="sourceRepo"
+              >GitHub</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/taketani-masatoshi/OpenOrgOS/archive/refs/heads/main.zip"
+              data-i18n="sourceZip"
+              >Download ZIP</a
+            >
+          </div>
+        </div>
       </div>
     </section>
 
     <footer class="site-footer">
       <div class="shell site-footer-inner">
         <span data-i18n="footerCopy">© OpenOrgOS Community</span>
+        <a href="https://github.com/taketani-masatoshi/OpenOrgOS" rel="noopener noreferrer" data-i18n="footerGithub">GitHub</a>
         <a href="mailto:hello@oorgos.org">hello@oorgos.org</a>
       </div>
     </footer>
 
     <script src="/ecosystem-links.js?v=7278b2c6" defer></script>
     <script src="/locale-bridge.js?v=e58fe9b1" defer></script>
-    <script src="/demo-i18n.js?v=1d19bc5f" defer></script>
+    <script src="/demo-i18n.js?v=26cd97da" defer></script>
   </body>
 </html>

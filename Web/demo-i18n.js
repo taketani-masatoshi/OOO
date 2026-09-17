@@ -37,6 +37,12 @@ const copy = {
     urlWireLabel: "Inter-org",
     step3Note: "Stop: <kbd>Control</kbd>+<kbd>C</kbd> in Terminal.",
     ctaHome: "Back",
+    sourceTitle: "Source",
+    sourceLead:
+      "Clone or download the public OpenOrgOS reference from GitHub. Live tenant workspaces are not in that repository.",
+    sourceRepo: "GitHub",
+    sourceZip: "Download ZIP",
+    footerGithub: "GitHub",
     footerCopy: "© OpenOrgOS Community",
   },
   ja: {
@@ -77,6 +83,12 @@ const copy = {
     urlWireLabel: "相手組織",
     step3Note: "止める: ターミナルで <kbd>Control</kbd>+<kbd>C</kbd>。",
     ctaHome: "戻る",
+    sourceTitle: "ソース",
+    sourceLead:
+      "公開の OpenOrgOS 参照実装は GitHub から clone または ZIP で入手できます。実テナントのワークスペースはリポジトリに含まれません。",
+    sourceRepo: "GitHub",
+    sourceZip: "ZIP をダウンロード",
+    footerGithub: "GitHub",
     footerCopy: "© OpenOrgOS Community",
   },
   zh: {
@@ -113,6 +125,12 @@ const copy = {
     urlWireLabel: "对方组织",
     step3Note: "停止：在终端按 <kbd>Control</kbd>+<kbd>C</kbd>。",
     ctaHome: "返回",
+    sourceTitle: "源码",
+    sourceLead:
+      "可从 GitHub clone 或下载 ZIP。公开仓库不含实际租户工作区。",
+    sourceRepo: "GitHub",
+    sourceZip: "下载 ZIP",
+    footerGithub: "GitHub",
     footerCopy: "© OpenOrgOS Community",
   },
 };
