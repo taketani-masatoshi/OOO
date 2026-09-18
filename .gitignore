@@ -22,6 +22,7 @@
 
 # Core git worktrees must not nest under the umbrella root
 /ooo-core-mal-loop-hardening/
+/Core-worktrees/
 
 # Tenant workspace — never post to GitHub (see tenants/GIT-POLICY.md)
 /tenants/**
