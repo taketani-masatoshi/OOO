@@ -28,5 +28,6 @@
 | テナントを GitHub に載せない | `scripts/forbid-tenant-github-post.sh`（hook + CI `no-tenant-post`） |
 | 地図の契約 | `scripts/check-layout-map.sh`（CI `layout-guard`） |
 | Core の先端衛生 | `Core` で `npm run check:tenant-tip` |
+| 開発エージェントの作業面 | `.cursor/rules/dev-agent-workflow.mdc` · `scripts/dev-task.sh`（1 task = 1 branch = 1 worktree） |
 
-業務用 AIA の dispatch と開発用 worktree は別。commit / push / 公開・実テナント変更は、この規約を読むだけでは許可されない。
+業務用 AIA の dispatch と開発用 worktree は別。開始時は各 git 根で `git status`。dirty なら新規 worktree。`orgos validate` の warning は失敗ではない（捏造して消さない）。commit / push / 公開・実テナント変更は、この規約を読むだけでは許可されない。

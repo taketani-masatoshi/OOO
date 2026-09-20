@@ -1,0 +1,26 @@
+---
+description: 開発エージェントの作業面ガード（1目的1ブランチ・Warning≠失敗・開始時 git status）
+alwaysApply: true
+---
+
+# 開発エージェントの作業面
+
+業務用 AIA の dispatch とは別。実行口は `scripts/dev-task.sh`（1 task = 1 branch = 1 worktree）。worktree は OS サンドボックスではない。
+
+詳細の正本宣言: `artifacts/reports/parallel-workstream-consolidation-2026-09-17.md` · 作業面メモ: `artifacts/reports/workstream-guardrails-2026-09-17.md`
+
+## 1. 1目的1ブランチ
+
+ready な製品正本候補 PR は同時に1つ。別目的は dirty な正本 tip に混ぜない。別目的は新規 worktree。
+
+## 2. Warning ≠ 失敗
+
+`orgos validate` が exit 0 で残す warning（ISO 監査・成熟度未達・プレースホルダ）はビジネス上の事実であり、コードのバグではない。ゼロ化・空テンプレ・実証なしのレベル引き上げ・事実の捏造で消さない。CI の必須失敗（exit ≠ 0）と混同しない。
+
+## 3. 開始時に各 git 根で `git status`
+
+対象リポが dirty なら、その作業ツリーには書かず新規 worktree を作る。傘の `M Core` は submodule pointer であり、規約ファイルと一緒に stage しない。`tenants/mal/**` は commit / push しない。
+
+## 今週の焦点
+
+製品取り込み正本は OpenOrgOS #40 `cursor/mal-operations-dashboard`。残作業は `generated:check` の正規同期のみ（`npm run agent:capability:sync` · `npm run agent:docs:sync` · `orgos operator export --all`）。生成物を手で直さない。次の CI 失敗（readiness 点数、e2e 等）へ進まない。
