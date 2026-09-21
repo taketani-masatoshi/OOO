@@ -1,0 +1,29 @@
+schema: ooo.dev-task.v1
+task: doctrine-declaration
+kind: development-agent
+not: business-aia-dispatch
+repo: Core
+source_checkout: /Users/kk/OOO/Core
+worktree: /Users/kk/Core-doctrine-declaration
+branch: dev/doctrine-declaration
+base: origin/main
+start_commit: b752bbf0b584a10efd6a6856bbbf1bbf1eaac6ea
+paths:
+  read: ["Core/"]
+  write: ["Core/"]
+  generated: []
+  denied:
+    - Console/
+    - Auth/
+    - tenants/
+    - operations/
+    - runtime-private/
+shared_resources:
+  - lockfiles
+  - schemas
+  - db-migrations
+  - auth-contracts
+  - ci
+completion: inspect clean of denied paths; no commit/push unless separately approved
+isolation: convention-and-inspect
+sandbox: none
