@@ -17,3 +17,5 @@ alwaysApply: true
 8. 入口はルート `AGENTS.md` と `PROJECT-MAP.yaml`。日付付き報告は `artifacts/reports/`。
 9. パス互換の二重配置（例: `extracts/console/apps/`）は正本にしない。
 10. 迷ったら直さない。extract への編集は拒否する。
+
+`scripts/install-hooks.sh` を1回実行して hook を有効化する。地図を触ったら `scripts/check-layout-map.sh`。

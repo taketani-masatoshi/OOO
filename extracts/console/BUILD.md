@@ -19,19 +19,22 @@ Verified 2026-09-07 (reverify): both builds EXIT 0. Logs: `artifacts/reports/con
 
 ## Standalone extract (non-goal / FAIL expected)
 
-`extracts/console/wire-console` has theme copies under `shared/` / `apps/shared/`, but Vite still fails resolving workspace packages (e.g. `@simplewebauthn/browser`). **Do not treat extract-only `vite build` as a migration blocker.** Prefer Core workspace builds above.
+`extracts/console/apps/wire-console` has theme copies under `apps/shared/`, but Vite still fails resolving workspace packages (e.g. `@simplewebauthn/browser`). **Do not treat extract-only `vite build` as a migration blocker.** Prefer Core workspace builds above.
 
 ## Layout of Console extract
 
-| Path | Role |
-|------|------|
-| `wire-console/` | App extract (review) |
-| `apps/wire-console/` | Duplicate layout for path parity |
-| `wire-console-lib/` | From Core `src/lib/wire-console` |
-| `operator-console-lib/` | From Core `src/lib/operator-console` |
-| `deploy/operator-console/` | Deploy notes |
-| `e2e/` | Playwright smoke specs (run from Core) |
-| `shared/`, `apps/shared/` | Theme CSS copies |
+Paths mirror Core so each entry diffs against one canonical path.
+
+| Path | From Core |
+|------|-----------|
+| `apps/wire-console/` | `apps/wire-console` |
+| `apps/shared/` | `apps/shared` (theme + shell) |
+| `wire-console-lib/` | `src/lib/wire-console` |
+| `operator-console-lib/` | `src/lib/operator-console` |
+| `deploy/operator-console/` | `deploy/operator-console` |
+| `e2e/` | `e2e/wire-console*` |
+
+Drift from Core: `./scripts/check-extract-drift.sh`.
 
 ## Core dependency
 

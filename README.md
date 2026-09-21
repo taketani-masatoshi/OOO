@@ -14,7 +14,7 @@
 | **Core** | product | `Core/` | OpenOrgOS。CLI / テナント / Console ビルドもここ |
 | **Community** | product | `Community/` | `community.oorgos.org` |
 | **Web** | product | `Web/` | oorgos.org の正本編集パス |
-| **Console / Auth / ops** | extract | 編集しない | [`extracts/`](extracts/) — 各 `EXTRACT-NOT-CANONICAL.md` |
+| **Console / Auth / ops** | extract | 編集しない | [`extracts/`](extracts/) — 各 `EXTRACT-NOT-CANONICAL.md`。乖離は `./scripts/check-extract-drift.sh` |
 
 ### Web（oorgos.org）
 
@@ -22,9 +22,12 @@
 - 公開時は Web から直接 Vercel、または `npm run sync-to-community` で Community に戻してからデプロイ
 
 ```bash
-source ./dev-env.sh   # このファイル位置から OOO_ROOT を解決（既存 env は上書きしない）
-cd "$ORGOS_HOME"      # 既定は <repo>/Core
+./scripts/install-hooks.sh   # clone 直後に1回（テナント保護 hook を有効化）
+source ./dev-env.sh          # このファイル位置から OOO_ROOT を解決（既存 env は上書きしない）
+cd "$ORGOS_HOME"             # 既定は <repo>/Core
 ```
+
+`core.hooksPath` を設定しないと `.githooks/pre-commit` と `pre-push` は動きません。
 
 Core は通常、cwd から `tenants/` を自動検出します。
 
@@ -33,20 +36,23 @@ Core は通常、cwd から `tenants/` を自動検出します。
 ## ルートの見え方
 
 ```text
-Core/ Community/ Web/     # product
-extracts/                 # 見本（auth, console, provisional-canvas-web, operations?）
+Core/ Community/ Web/     # product — ここだけ直す
+extracts/                 # 見本（auth, console, provisional-canvas-web, operations）
 archive/                  # 移行記録
-artifacts/ runtime-private/
-tenants/GIT-POLICY.md
+artifacts/                # generated（レポート追記のみ）
+runtime-private/          # ローカル専用（GitHub に載せない）
+tenants/                  # GIT-POLICY.md と 00-README.md のみ
 ```
 
 ---
 
 ## レガシーパス（非正本）
 
-- `/Users/kk/OS_Steward`（旧 Core）
-- `/Users/kk/OS_Community`（旧 Community）
-- `/Users/kk/Documents/Codex`（Core 候補・未採用）
+このリポジトリ外のローカル checkout。移行当時の実パスは [`archive/MIGRATION-REPORT.md`](archive/MIGRATION-REPORT.md) にあります。
+
+- `OS_Steward`（旧 Core）
+- `OS_Community`（旧 Community）
+- `Codex`（Core 候補・未採用）
 
 **今は削除しないでください。**
 
@@ -64,7 +70,11 @@ tenants/GIT-POLICY.md
 git clone --recurse-submodules https://github.com/taketani-masatoshi/OOO.git
 ```
 
-**ポスト規則:** テナント情報は GitHub に載せない（`tenants/GIT-POLICY.md` 以外）。`extracts/operations/` と `runtime-private/` も公開しません。
+**ポスト規則:** テナント情報は GitHub に載せない。傘 `tenants/` で載せるのは `GIT-POLICY.md` と `00-README.md` の2つだけ。`extracts/operations/` の payload と `runtime-private/` も公開しません。
+
+`./scripts/install-hooks.sh` を1回実行すれば、傘の pre-commit / pre-push がこの規則を止めます（CI は `no-tenant-post`）。
+
+傘の hook は submodule の境界を越えられないので、`Core/tenants/` は Core 自身の hook が必要です。各 git ルートに何を期待するかは `PROJECT-MAP.yaml` の `layout.git_roots[].hooks` に書いてあり、`install-hooks.sh` は保護されていないルートを名指しで報告します（Community は `tenants/` を持たないので `exempt`）。
 
 ---
 

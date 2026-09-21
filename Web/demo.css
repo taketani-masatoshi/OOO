@@ -85,6 +85,12 @@ html:lang(zh) .hero-kicker {
   margin-bottom: 0;
 }
 
+.demo-scope-note {
+  margin: calc(var(--space-3) * -1) 0 var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
 .steps {
   list-style: none;
   margin: 0 0 var(--space-5);

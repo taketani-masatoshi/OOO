@@ -20,6 +20,9 @@
 # nested product checkouts are git submodules, not regular trees
 # (do not `git add` these directories as files)
 
+# Core git worktrees must not nest under the umbrella root
+/ooo-core-mal-loop-hardening/
+
 # Tenant workspace — never post to GitHub (see tenants/GIT-POLICY.md)
 /tenants/**
 !/tenants/GIT-POLICY.md
