@@ -1,0 +1,1 @@
+import {defineConfig} from "vitest/config"; export default defineConfig({test:{include:["tests/annual-close-acceptance.test.ts"],setupFiles:["audit.setup.ts"],testNamePattern:"AUDIT A",fileParallelism:false,testTimeout:60000,hookTimeout:15000}});

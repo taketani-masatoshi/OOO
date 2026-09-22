@@ -1,0 +1,25 @@
+{
+  "scope": "synthetic data only; current canonical Core working tree",
+  "files": {
+    "src/lib/finance/consumption-tax.ts": "3cb58f68f369228ed11e5108b4e83e733f112b6ae31277485034822774faa802",
+    "src/lib/finance/payroll-jp.ts": "36c129f2b70b017c50be65d15f612c35f78d0bd83aeb405e92dd9c8a8ad2678b",
+    "src/lib/finance/tax-adjustment.ts": "64d9fc989c90e3f2ae7a8f2e4b8497fab127d77b2e1b2d06bfafa943494d4293",
+    "src/lib/finance/income-tax-policy.ts": "85ce2fc1fb7aac4a01b58418e725e25fe92e83cb7bdae604f1ae104bd755b930",
+    "src/lib/finance/annual-close.ts": "7612646361a61b93e9fac72542705d2b8dddb9a42ec840f44596e241c4f502aa",
+    "src/lib/finance/monthly-close.ts": "8aabc885cf9c3bde3fc63ff275a93a44fecbc60c8c260b5a5253077bf037022e",
+    "src/lib/finance/ledger/opening-balance.ts": "f9150c613b0c2c6d8c0d3ed49f216f5fb3da644920ed307410e600811230b913",
+    "src/lib/finance/ledger/trial-balance.ts": "60a163cd44ecee303602bc1d679d1e4744acacb5ff9bb622041c5dda644b740b",
+    "src/lib/finance/bank-statement-import-service.ts": "31e9660338cf8ee526bf79f2435f791f488b010e563dfd996f0d6b74b910e8aa",
+    "src/lib/finance/depreciation.ts": "ea78f5676a4dd857008822c321d225ac6275464c5aa339170b3bc6b8cc19daf0",
+    "src/lib/finance/journal-sources.ts": "c6b86b9e574be2c485548d49e5decaca3a704a446c5eb4a4e5d5dddfba593317",
+    "src/lib/invoice-generate.ts": "77a7cee1a15ccb6ae9d16e1616937602e0ae55befe09cf19fb80a93c0a7520f1",
+    "src/lib/finance/ledger/electronic-ledger.ts": "6adff9523adbe60ad4f3515fe8e797a19d2e7528728d6a9476d6bb68c6f55edc",
+    "tests/finance-audit-regression.test.ts": "d984d4bee72732fecf2a6a254675f9bc040259e0ca559ee594838c590db6946a",
+    "tests/finance-audit-annual-regression.test.ts": "7535928f22ad9b73b285c97ed86e7efc43d52f6536b4461da42f55da39abe061",
+    "scripts/run-finance-audit.py": "fa3a2cb68342625427e73f5eddaed009131c38c30b72c18a59c5e554dbee42d3"
+  },
+  "audit_tests": 75,
+  "journey_tests": 29,
+  "overlapping_recovery_tests": 16,
+  "note": "HTTP suite preceded final missing-journal guard; final audit suite includes that guard. Final unused-import cleanup does not change behavior."
+}

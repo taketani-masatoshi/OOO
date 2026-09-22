@@ -1,0 +1,676 @@
+{
+  "captured_at": "2026-09-22T05:46:54.521166+00:00",
+  "source_heads": {
+    "Core": "4090a74111e6f2624cbbdf644a07052a81c388bc",
+    "Community": "6ab8fe9c8bece677823c003bf0030d102ab155e8"
+  },
+  "working_tree_modified": true,
+  "data_kind": "synthetic",
+  "production_verified": false,
+  "source_files": [
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/annual-close.ts",
+      "sha256": "08e65189407455d26ff7e76426161fd50eb1bfdb58455eb37b491d8719aab29e"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/bank-csv-presets.ts",
+      "sha256": "93c08e6750ac613b9874c2dbe85efdeda48dd6c8f1f76da65da703b251b7ef61"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/bank-reconcile-apply.ts",
+      "sha256": "ce934c8bb088f071ef08d2aaaefbe1160b0f3d8621fdee719cadee4af5033aa1"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/bank-reconciliation-gl.ts",
+      "sha256": "495960ac122632d9d49ad6faac1f79b9f1e3f87f039c6f895f33e7e15d890d23"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/bank-statement-import-service.ts",
+      "sha256": "7c07ae2c753a3b414e0d82c79cebce8e5df25bfb56a8a07dee0307f8a408911c"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/bank-statements-lite.ts",
+      "sha256": "31350d79de2ba81c8416e7be5b130a82fea24610626f8ff54cf676a38627355e"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/close-adjustments.ts",
+      "sha256": "d872397d3f29dcea471a7dbdcc6005c2d6c42cff9628384809c81b2cd985a6d7"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/consumption-tax-eligibility.ts",
+      "sha256": "13ed4e8771293b6eb7aa54d61033c096dd4f7a3cc819ac7bd3892b6c74c139dd"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/consumption-tax-refund-receipt.ts",
+      "sha256": "6b6795406cb76960494b6a388c93798d2349ea4498ec63eac37273b282c08dd7"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/consumption-tax.ts",
+      "sha256": "deee8c219c4cda2b610da71797955e4c383aa601b0e610b49c0a88750ab49ff8"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/cost-allocation-rollup.ts",
+      "sha256": "ebf70e0f1577ac5f09241bcb735b1150adfc9fdec9a4c86c363a2291c43f1839"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/depreciation.ts",
+      "sha256": "11e3a3dd96bb4fd5561d69dc713fba88b36c34ba86b590aa915f38031b7f35cc"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/employee-reimbursement-payable.ts",
+      "sha256": "d7e045ca2dba54e8dfddb8942c205feb0ec1846fb6e4e0537ffd7c199f8aee07"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/expense-claim-approval-repair.ts",
+      "sha256": "a85c936743b7f6491250b791c3c2db6c3844fe75ac128cff1faf81a9b0d5e1f6"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/expense-claim-approver.ts",
+      "sha256": "552d0e5f0604eb7ce5fc8763302ba044d7fefae96b7e0fef44d931e82da3b02f"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/expense-claim-bank-match.ts",
+      "sha256": "2ffae00b4f7af7b151a9250936c0ab31bb8b4077ca85574fae266a2649eea359"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/expense-claim-category.ts",
+      "sha256": "665dad50b25ba8ef75ee1bf3f5500f5a11e82b06e6b199a8de7664ab5639d443"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/expense-claim-invoice.ts",
+      "sha256": "2445f9cb6494ed5e3e669e7b2ca17544aeff89b307e157b597faa9ca6293bd5f"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/expense-claim-journal.ts",
+      "sha256": "b22ed458ac6aec0311879c98e5a540f1bbd251231786a6c005568efa7202ff57"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/expense-claim.ts",
+      "sha256": "5e398af0080eac42cd6cb8ea73a3ad2d4b086ec30114fc4e9e4fbdb60c564f9d"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/expense-evidence.ts",
+      "sha256": "e8db8ace88c0bd86db905c8283b239b8449b9e71050daee237768d9ba5c9ec74"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/external-account-config.ts",
+      "sha256": "5f8161ae90c906b9de31c65a10f36c138618bcdeabebef66ecb69a3daad5e293"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/external-connector-runtime.ts",
+      "sha256": "2da52ffa7b9f43a9dfbc62e7b6418ab98418c62e355b270be9751ecfbffda357"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/external-provider-adapters.ts",
+      "sha256": "0f0322be2de920e5ec829116fc46c35d5f4d4a12f6f59b809d9ea741b4a1d554"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/external-reconciliation.ts",
+      "sha256": "bb7ec4a4a79dfe728d51f02b2776c55b313f0726b7181456d1f5171170b1245d"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/finance-mutation-lock.ts",
+      "sha256": "97f6cb9c32398cd48f2c2999bb75d1f2e77fdebabd7f71fb916e5d75bed0ea38"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/fiscal-year.ts",
+      "sha256": "9cdbf5e039d357e790fc0275f179f954693994b20a73e992e6b7308b9488d110"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/gl-report-basis.ts",
+      "sha256": "192f3512ebe9c36098e47e2dfa8f0fe04bf96d3eeca8afab2ec791236f72ac6a"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/income-tax-policy.ts",
+      "sha256": "a3e75e41f35ad3ebb41a6949e8dfab3b231591b327c9e9c8189c06bcf84b90d8"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/indirect-tax/family.ts",
+      "sha256": "2e9f563f75e0f9b883d147f9427687b8fe0e8d343fbedff6f5e2f8af83a1a94f"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/indirect-tax/port.ts",
+      "sha256": "8b233f7e68e9b6896a87bd54f7cfd797bd84cc0ce498db0da6787f87892cc69e"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/invoice-qualified.ts",
+      "sha256": "094805839e1f4fc77fb2a7307e2ca52caf726ce697cfe63494bdaae8a67ca058"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/journal-audit-backfill.ts",
+      "sha256": "318888139ac8d47eaa53b4f8a264c16c521061ce16328e21d96f154c841406c6"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/journal-post-guards.ts",
+      "sha256": "f64e2fe2179da1a0d4479f18fbcb647aec0a677fae3de549e3a2cb3b173d9554"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/journal-reverse.ts",
+      "sha256": "eaa1031b9eac5bee71a0bccb8d763a3a61e250736058a493bf71dcc7b613f770"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/journal-source-accounts.ts",
+      "sha256": "45afd7d91a9e8765493d850b3441fc89a927b3d06f922203329edcc0b4aac61c"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/journal-sources.ts",
+      "sha256": "989f7b3a19605f69009593c874ff18c088c50accb0917cf7237725888b8b9646"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/journal-tax-backfill.ts",
+      "sha256": "2f1a9a2bbe34a013c3bc016d85cf5962b788429bbbf5024e109e054e182f6690"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/journal-write-guard.ts",
+      "sha256": "8c3e8172af86ace2ed6cf2c8928f4b5f3b8dffbcdd0a7f076008a186d670b15c"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/jp-corporate-tax-xml.ts",
+      "sha256": "6bbd8da4a2ea123ebe7d339f8a85418975583c1b05c04673df360b76374981f3"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/kessan-gl.ts",
+      "sha256": "d72032f4c54e425764e5435b99b264377ce7143a05d5ce63a547030491d44731"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/balance-sheet.ts",
+      "sha256": "6aa8c8bcc67703d52858b3f52937eff471907c2adbaa556859436d5cdff8f8ac"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/cash-flow-statement.ts",
+      "sha256": "127780d9865c83af1a02133719039661050b85bb67911a6b391417a0e9f3b6f9"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/companies-act-score.ts",
+      "sha256": "15de2db05577033a0ff1f703dbdbcb88bab8be9c870c6d71ddd34ee60f4ea24b"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/companies-act-statement-map.ts",
+      "sha256": "caeae01f22c32bc66c0c5b58576958278e5406696d63c3ed8642982dc7361820"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/comparative-statements.ts",
+      "sha256": "4b7fc429d18e87d1a743045bfe244632d8606189f6c0c524f84c1ba669cf8cac"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/control-reconcile.ts",
+      "sha256": "529feb7d16ca342ee275607d65691912b02bec396acfffe36f01812321c3c3d4"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/electronic-ledger.ts",
+      "sha256": "420f15f8df6676595c1c2346b53c6272a6e1c88536097ac1fbb0947346915ec6"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/financial-statement-disclosures.ts",
+      "sha256": "695e00bcb3942f6c3bfe46feb97b38a5370ee91184b16028767575a624ec9b32"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/general-ledger.ts",
+      "sha256": "40c82abf5172f1d6b8497447eda88f8e8e0e1e3852e851104f1074d1e637f3e9"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/invoice-mpl-dedupe.ts",
+      "sha256": "74737c356cf6e2ae455b8b72e47fa05c342a8e0aaefdb93c2eb63a84d615d072"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/journal-export.ts",
+      "sha256": "5b8202e74c071bcddb3ee793cb65b2549464f6a42bdc29b909975cd3f3e20fa5"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/monthly-reconcile.ts",
+      "sha256": "5727dc4dc99680211703a068712dfbc8d693e73a61dd0b00b05e1cdb3e1a2b96"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/opening-balance.ts",
+      "sha256": "68c92330a99d81b22f7e5da683bab7ca657f7b0f0fe3756d496a9f61c5617892"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/statutory-statements.ts",
+      "sha256": "202e559fb37c9cdb00b12291b550887398478530847d773bcf90b95471046b18"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/subsidiary-ledger.ts",
+      "sha256": "e2bbb9fcc563732d00471897beb744cc35d4a07e082a03d6524fe20bf7a243da"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/trial-balance.ts",
+      "sha256": "b2891608c01d3300dd0f501668caef63eca4299c481c5cf369826a7772dd44ab"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/unposted-months.ts",
+      "sha256": "d6c89d4feba67d724b52b19442b945a22a0a7fdcbc994a720512970f1c2742cf"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/ledger/workbench.ts",
+      "sha256": "536ada52b97b662f92463e0403b7c3889773488fae4e6bef15d54ba346503bbe"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/monthly-axes.ts",
+      "sha256": "d0534c4e7855b1592d65a9e69f670c835ada5320f6cb64a3367505bbf39be4be"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/monthly-close.ts",
+      "sha256": "e30484da18fb1c634ae0582463df560922d9ffff30dc0c41856a21c7da6c1416"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/payroll-bonus-yea.ts",
+      "sha256": "5b7e114b02e5d8e8f9723dc33cfeb99d32494cf93499570a5c4b77f2d121a39d"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/payroll-fiscal-window.ts",
+      "sha256": "bd924c936339690ececfe8bed57ee132f63ea3348874746c33e05ed0866808a7"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/payroll-jp.ts",
+      "sha256": "847570b9dfd18dc23823c4acd07d1a02a488004417949bd8aeb6bc152709590e"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/payroll-monthly-reconcile.ts",
+      "sha256": "5bd1b6f429c4f69c38ba62ed5044e3943f0d355dece900107695ae6b2bcc0e81"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/period-lock.ts",
+      "sha256": "2c1dba8969679fd82c2566acf5932139796e18305cf23ca1c5279f25ee96b385"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/reconciliation-recovery-audit.ts",
+      "sha256": "d2c60899be3e572ef843eba46f8f0d607ebea4e9eb20ed6da059faeef64cf6fc"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/reconciliation-transaction.ts",
+      "sha256": "d8e41acbaa8b3d9e9e0d10d5d10072435c29e72f9d53e25de9ba9182e14327fe"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/remittance-from-calendar.ts",
+      "sha256": "540de190a69d8671bd4518622dc3a4005d120cdb62ab34729ee9b9547c0d11a2"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/remittance-integrity.ts",
+      "sha256": "b6dcabbe7775f0b6772330b41e17ecff7b7b2bd998d3927b66d333034e77dded"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/sole-prop-blue-return.ts",
+      "sha256": "f8e99d4a504715a51ecc29c6372d9adf3edaea48b886d60a2fcaf6f9d5233d88"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/sole-prop-entity.ts",
+      "sha256": "0c0e88091ab6796e6ba2a3ba097e3ed3e18205055c7ebd66f6efb69efd217ff4"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/sole-prop-income-adjustment.ts",
+      "sha256": "6194a7973e8b9afad1603aa3d1daa89c3187527b6d1172e34199efd1834a8f17"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/sole-prop-income-tax-return.ts",
+      "sha256": "79ab28bed413512fc7a03c1fe949d78a8c265884f84d259f90a1a423c732ab0a"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/statutory-filing-readiness.ts",
+      "sha256": "47989d3fcd1751705d1448f2dca53ffd498f5af045b155cdc80fefd79d16c5ae"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/tax-adjustment.ts",
+      "sha256": "15e4ccc8104f0bc061f4d3719307204a965064399bf96e9fcf13c18403a4dc1f"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/tax-advisor-handoff.ts",
+      "sha256": "5f125df2656ab8889ed417d95a9c4e07a5077c66255bfffea115a0314bb5e5c5"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/tax-calendar-portfolio.ts",
+      "sha256": "fcbeb8f705d3c9821a8f460e63ce619f8f361b51a98a158a8a3e6864a9c15544"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/tax-filing-docs.ts",
+      "sha256": "3e92b18a57bd1f21943afff229fd8fe79ae8ab147bd9837ce28de308fff0a819"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/tax-filing-gaps.ts",
+      "sha256": "02930c0f8844a9b972ab360d1cdb859627fc2d3538b9015ddbfe5c1680f40468"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/tax-gap-admin.ts",
+      "sha256": "331f8c2d2e3e0c40d88692ae94915a42bd2550c5d7a44424df5d94728f5afbdb"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/tax-readiness.ts",
+      "sha256": "60b9ad14e7e20180c3b3008a66d98a9638492da7c2637e2cc0817bb6c1813817"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/tax-skill-runners.ts",
+      "sha256": "f6ad022b0a1716a29ef015075bb8a463d1020b163215a5b944329f872d6210be"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/treasury-skill-runners.ts",
+      "sha256": "27ec99bdcce558c6fa55b8e5310c13c1f1ffb09be3f735258827bf362418e5f2"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/withholding.ts",
+      "sha256": "b5cf549f16f06125660f83e90627ec6e935e9bc49921b5be4aa91381fc4fe1c1"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/year-end-declaration.ts",
+      "sha256": "b7f494dec2403ecfe21952ffeb836909dd500c22e826d3bb72d951f81215f60a"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/finance/year-end-file.ts",
+      "sha256": "25c7df7aecb32e17e26ff73f86a218265e800d6636f96938632e3075edd2cfca"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/jp-bank-corporate/cashflow-chat-intent.ts",
+      "sha256": "0ab501b1e75cdd37f403570ad06a1d1fe9ef39541f2b3eae03bf415bb5ddf0a0"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/jp-bank-corporate/cashflow-request.ts",
+      "sha256": "7d4d90dc5e3bc7f5705043385203c95162cc21a5645f0c68de01aaa667459775"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/jp-bank-corporate/input-fingerprint.ts",
+      "sha256": "1ece83a4630e61674508729a7782e439a69abe137242a0ff8775c2cb18cd910b"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/jp-bank-corporate/pipeline.ts",
+      "sha256": "c2b23412109a63b104bf9134faa9b3f1e673ceca11bbaab2b3353dfd40c13db8"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/jp-bank-corporate/reconciliation-store.ts",
+      "sha256": "4a2a575492088c1e32f7195ed7057a30f0536c835e29b8ff5f633732fc7bf127"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/jp-bank-corporate/reconciliation.ts",
+      "sha256": "0a9d1526eb8753657a53c01210a598b6b0df2ab9975c23938b3e0118d6aa7ef7"
+    },
+    {
+      "repository": "Core",
+      "path": "src/lib/jp-bank-corporate/reports.ts",
+      "sha256": "a03e7835753e600f3ec2d1410f8106d16c71ba30ce6f119e222341493d121133"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/balance-assets.ts",
+      "sha256": "cd6d5198620bdb70554aa12fcc6baae93cc14f4370172c4a0b93913d7c8cfebd"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/bank-financing-case.ts",
+      "sha256": "9d655bbd1e53f49f73335e6dbec7aa8c08de7b7f4f46aafd59914959073e15c1"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/bank-financing-pitch.ts",
+      "sha256": "2faa3b65b6dbfe5a4cc8887f4f515eedcfc9780c5884f5ff762c696f3ef5a0a3"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/business-units.ts",
+      "sha256": "f64c1f3c3d2793dd72bdb9600c497b0e2ff69e5735fcbf04c2e074b44326ff83"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/capital-raise-case.ts",
+      "sha256": "7353219b3232afb6343a43f1ac37b8eb739b7a893a2b90c599af0e104a09798c"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/chart-of-accounts.ts",
+      "sha256": "f8abc2c1fdb859f2fdf9505577fcf096306bccfdab332923a934a61ddc1ad2da"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/consumption-tax.ts",
+      "sha256": "8abff1d07114761c4333ba5ff7bdbc81f09a067b357d6923696529b882cc426c"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/cost-allocation.ts",
+      "sha256": "10ea1dc6c22ee5402908941ce34dcae7255e373afbc68ade5f0a061e72987e7f"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/employee-reimbursement-payable.ts",
+      "sha256": "aae2d735a5b714d94156b068295c9abfbfb216d4c10dbf40ab8c0c9044c37fb7"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/expense-claim.ts",
+      "sha256": "98a4285a019d7db5e0100376bd4a182d0e6662dddd0809f93ad7518456adcd9d"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/expense-evidence.ts",
+      "sha256": "6e299067058fd8849ca0b2ccd15740282d30167db05758ad1deccc528dab73ab"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/external-accounts.ts",
+      "sha256": "49be664a93a2a521c964fe28219f4598ce68558e6db427d4788534f799919bc8"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/external-transaction.ts",
+      "sha256": "000b8615a2dfb7a909639f0e1d7f271f8d4574975848ef75d9438c0e38b8c29a"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/funding-handoff.ts",
+      "sha256": "68913acd89a8fdd5e7d92b6ca552d001c63b417c74bd231623f88409998d5094"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/funding-strategy.ts",
+      "sha256": "3f74ae24d61ae17ebd6e86787d213417f6a1990b7a48060af2e46ea1ab3216ec"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/index.ts",
+      "sha256": "cdc615a6fe9a678242030df96ab11a317983e549fe2c1433ef4c662e72cef984"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/invoice-registration-catalog.ts",
+      "sha256": "e589c4776fe2c7c96f102dc2b0d72e40ea44870d8dcb379bf2c2b3f8984cc19b"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/iso20022.ts",
+      "sha256": "84f19485df6c7fd6ca879be1d7b96f879c3a7be40a48d2035a2f0a92f3fe3ab9"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/journal-entry.ts",
+      "sha256": "b235508eb99c0f1b33d12560dc4ca1e13b782c82a7b7f75b4036d3b697043549"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/monthly-loans.ts",
+      "sha256": "0f83ce08be7041f90b8af4d2790f5e983e1a1de0217047b60d5f2ff21c49f1ac"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/opening-balances.ts",
+      "sha256": "042bd6d99444a97ba4b7911d48da0c136895e971244a588216b262244cd96fc7"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/outlook.ts",
+      "sha256": "82a81e613068333768580ec07b51a4ba3bb06d5bb98d5ae5a5670bbc557b6a0e"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/period-lock.ts",
+      "sha256": "21e9a12bdab669bde1574d0a2b3fa619f03579ffbbb5ac4bebd59a8764716655"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/policy-finance-case.ts",
+      "sha256": "b06b330956fe09d6cbb123db77d0a7914c42a478943f4069bc929ccaa849d2f9"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/policy-finance-program.ts",
+      "sha256": "be4cb59c145d49a8366b9d69848cac04fd4d628b7aaa7509e85a7dbefe7785c3"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/property-scenarios.ts",
+      "sha256": "b4c2076be211d63a60dd7c0edf0a18b749aac5b57ed0b2e73e7c6eb45fab2ae7"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/tax-adjustments.ts",
+      "sha256": "a0c582ca6de1f298de14af4a1ffe7cadcbc0ae43e5a16a33464fe404e9a99682"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/tax-filing-gaps.ts",
+      "sha256": "ebe3ba3413425c454ef369d5aa20a6b9a3d78c666054946e7560d4909bf8a02c"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/tax-profiles.ts",
+      "sha256": "d0ba2cf8ee2a052afb646d79819136cb5ef84728392ecd7ea5d1467a5e389044"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/types.ts",
+      "sha256": "2d41e52e69a47312f39180f79bc0b577b17089375162ba71fcc240f1f1ce3e0f"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/year-end.ts",
+      "sha256": "941dfac6859ee3aefe86a8f9a3d017124719f91b6babbd21e46baa417f8afda8"
+    },
+    {
+      "repository": "Core",
+      "path": "schemas/finance/yojitsu.ts",
+      "sha256": "b2043bdfe05b1c2e1b3bbe493a75290ce81d0b9ff3b41433d7202f1bf75ed5d3"
+    },
+    {
+      "repository": "Community",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "6f5694a292d2ecd2250aa88dcd8fb59bc884132dca5bccb1ba5d0f2a30cd2669"
+    },
+    {
+      "repository": "Community",
+      "path": ".github/workflows/publish-image.yml",
+      "sha256": "7343ca0f049abf746f8432fa8b6739d885f48b1c68d1a90d50b6a1a56a18ecb5"
+    },
+    {
+      "repository": "Community",
+      "path": "scripts/protocol-artifact.mjs",
+      "sha256": "b5f6e256de214315e734ae6c783510d2ac6e599e0a0359b3999a0f2ca36a2de6"
+    },
+    {
+      "repository": "Community",
+      "path": "scripts/tests/protocol-artifact.test.mjs",
+      "sha256": "8a4643b196d1b3b9b215bd8abd602600ac989aed33c3951b2e506368e12a8b89"
+    }
+  ],
+  "fix_tests": {
+    "passed": 29,
+    "total": 29
+  },
+  "community_artifact_tests": {
+    "passed": 4,
+    "total": 4
+  },
+  "broad_tests": {
+    "passed": 95,
+    "failed": 19,
+    "total": 114
+  },
+  "defect_observations": 15
+}

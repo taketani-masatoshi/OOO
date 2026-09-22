@@ -1,0 +1,20 @@
+{
+  "suite": "11 files, 96 passed",
+  "workspace": "/private/tmp/ooo-finance-audit-z7iynl4v",
+  "typecheck": "passed",
+  "targeted_eslint": "passed",
+  "files": {
+    "src/lib/finance/payroll-annual-source.ts": "2f3195d48a0885f9b5a68611964617222dbb4f3b7bd0e64de1991e162632d967",
+    "src/lib/finance/payroll-bonus-yea.ts": "deaf5399859bb7c63ab58cab3fdd420b75f18259a943ba5ec10646343b8872d4",
+    "src/lib/finance/journal-sources.ts": "a3e9b3db7e6f22d9cac0dc750a4d6abb3e20dafc922b58d192463877ab798d33",
+    "src/lib/finance/monthly-close.ts": "8fa0c5860155b1379976cbc434313f60266d098b5026f047baad7df3a04a8134",
+    "src/lib/finance/payroll-jp.ts": "ee783a8bbc86c855b11bf7f873361e3cb75da7d7f594c8b1f9e10aaf81995f80",
+    "src/lib/finance/consumption-tax.ts": "8f32b21c559fe841c55efba21c5f332d9ff3e6841d7df1c98fcbbba6ebb885d6",
+    "src/lib/finance/jp-engine-guard.ts": "71184eba60213f642da108cc88d2b60b68437749b559498c6bd5e9d2a5893851",
+    "src/lib/finance/indirect-tax/port.ts": "80350c7b02d79d860759fc68a017aa85a0d154a3468677dc4221496c8aacc26f",
+    "src/lib/steward-chat/routes/tax-api.ts": "7f294ea2a92d88d362914dbfc4d3ff789d22d967034882b5cd5adc8a48e4fb5b",
+    "tests/payroll-yea-compute.test.ts": "49908c93c105db96d25da69da42fee7fbbfe7791b6e8f6299410225069c93526",
+    "tests/finance-jurisdiction-safety.test.ts": "afce58b2390b308174ed063413115d6ed81227401ceb7764cf0daa25aba2bbcc",
+    "scripts/run-finance-audit.py": "5e8a77194b8a49010bd5acc7e2f026c9e1ce7f9e566195e6e96c3d58a6eb7760"
+  }
+}

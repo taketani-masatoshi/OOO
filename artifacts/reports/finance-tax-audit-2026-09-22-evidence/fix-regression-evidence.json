@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "data_kind": "synthetic",
+  "verification": "http-integration",
+  "production_verified": false,
+  "started_at": "2026-09-22T05:35:17.158Z",
+  "completed_at": "2026-09-22T05:36:00.723Z",
+  "source": {
+    "head": "4090a74111e6f2624cbbdf644a07052a81c388bc",
+    "tracked_diff_sha256": "41be55de85bf42075c39d2783d27a89e0e63b40edc233dc3aa3956c5efdebe2d",
+    "harness_sha256": "52cad1d42a6e9fc7bf7204afd94d5f225d06c9e6611aaaaaf0e330be38102889"
+  },
+  "passed": true,
+  "exit_code": 0,
+  "signal": null,
+  "tests": {
+    "total": 29,
+    "passed": 29,
+    "failed": 0
+  },
+  "duration_ms": 43566,
+  "limitations": [
+    "synthetic session; no Passkey ceremony",
+    "CSRF and settlement step-up disabled",
+    "no browser, external AI, payment or customer outcome verification"
+  ]
+}
