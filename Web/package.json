@@ -1,6 +1,7 @@
 {
   "name": "@ooo/web-overview",
   "private": true,
+  "license": "GPL-2.0-only",
   "description": "Canonical oorgos.org static overview. Edit here (Web/). Generate into this tree; sync to Community is a separate command.",
   "scripts": {
     "overview:links": "bash scripts/generate-overview.sh",

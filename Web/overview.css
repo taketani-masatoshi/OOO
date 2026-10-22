@@ -350,6 +350,12 @@ html:lang(zh) .section-kicker {
   color: var(--ink-soft);
 }
 
+.site-footer-license {
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--ink-soft);
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: var(--space-8) 0 var(--space-7);

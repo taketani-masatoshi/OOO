@@ -47,6 +47,8 @@ root:
     - AGENTS.md
     - PROJECT-MAP.yaml
     - README.md
+    - LICENSE
+    - TERMS_OF_SERVICE.md
     - .gitignore
     - dev-env.sh
     - .cursor/rules/

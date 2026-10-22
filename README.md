@@ -94,3 +94,9 @@ git clone --recurse-submodules https://github.com/taketani-masatoshi/OOO.git
 - **web_canonical** — `Web/` が coming-soon の正本編集パス
 - **github** — 傘リポジトリあり。テナント実データの push は禁止
 - **legacy_deletion** — 未実施（人間サインオフ待ち）
+
+---
+
+## License
+
+OpenOrgOS is distributed under the [GNU General Public License v2.0 only](LICENSE) (`GPL-2.0-only`). For commercial licensing, patent permissions, or enterprise inquiries, please review our [Terms of Service](TERMS_OF_SERVICE.md). Contributions are accepted under the Contributor License Agreement in Article 7 of the Terms of Service.

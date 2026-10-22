@@ -44,6 +44,10 @@ const copy = {
     sourceZip: "Download ZIP",
     footerGithub: "GitHub",
     footerCopy: "© OpenOrgOS Community",
+    footerLicenseLead:
+      "OpenOrgOS is distributed under the GPL v2 License. For commercial licensing, patent permissions, or enterprise inquiries, please review our ",
+    footerLicenseLink: "Terms of Service",
+    footerLicenseTail: ".",
   },
   ja: {
     pageTitle: "OrgOS を試す — OpenOrgOS",
@@ -90,6 +94,10 @@ const copy = {
     sourceZip: "ZIP をダウンロード",
     footerGithub: "GitHub",
     footerCopy: "© OpenOrgOS Community",
+    footerLicenseLead:
+      "OpenOrgOS は GPL v2 ライセンスで配布されています。商用ライセンス、特許の許諾、法人向けのお問い合わせについては",
+    footerLicenseLink: "利用約款",
+    footerLicenseTail: "をご確認ください。",
   },
   zh: {
     pageTitle: "试用 OrgOS — OpenOrgOS",
@@ -132,6 +140,10 @@ const copy = {
     sourceZip: "下载 ZIP",
     footerGithub: "GitHub",
     footerCopy: "© OpenOrgOS Community",
+    footerLicenseLead:
+      "OpenOrgOS 以 GPL v2 许可证发布。如需商业许可、专利授权或企业咨询，请查阅我们的",
+    footerLicenseLink: "服务条款",
+    footerLicenseTail: "。",
   },
 };
 
