@@ -30,3 +30,17 @@ PHP2Shell（CVE-2026-109618 / 109619）を把握し、自社開発内容を点�
 3. **Community: license + footer** — 同上 + フッター注記
 4. **傘: license + Web footer + PROJECT-MAP** — 同上
 5. artifacts レポートは傘に含める（テナントデータは含めない）
+
+## 進捗更新（2026-10-22 夜）
+
+- 財務テスト一式（`/tmp/files.txt` 81 files / 454 tests）: **全件パス**
+- 修正要点:
+  - 請求書 JE / invoice-generate: `counterparty_id` 欠落時は `property_id` にフォールバック
+  - 会計 acceptance: bank e2e 後の stub 明細と reconciliation-events を整合（lite 読取可）
+  - bonus 下書きテスト: 従業員・税社保・証憑を明示
+  - external reconciliation: 小数は minor_unit>0 通貨で検証
+  - agent-capability-manifest: tax skills drift を同期解消
+  - HTTP/fixture: `setTenantEnv` + fixture payroll rates
+- MAL 2026-06 月次ロック: 給与料率未整備のため引き続きブロック（別証跡）
+- PHP2Shell: 製品コードに PHP なし。運用側 WordPress(malkk.com) はオペレータ対応
+
